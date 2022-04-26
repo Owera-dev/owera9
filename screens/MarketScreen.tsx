@@ -7,9 +7,9 @@ import { RootTabScreenProps } from '../types';
 export default function MarketScreen({ navigation }: RootTabScreenProps<'Market'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Market</Text>
+      <Text style={styles.title}>#listed offers</Text>
+      <Text style={styles.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of contacts, name and prename,) #Ratings #Add service to contacts #Purch service #searchword input</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/MarketScreen.tsx" />
     </View>
   );
 }
@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  normal: {
+    fontSize: 15,
+    fontWeight: 'normal',
   },
   separator: {
     marginVertical: 30,

@@ -87,7 +87,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="Contacts"
-        component={ProvideScreen}
+        component={ContactsScreen}
         options={({ navigation }: RootTabScreenProps<'Contacts'>) => ({
           title: 'Contacts',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
