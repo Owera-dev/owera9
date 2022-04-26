@@ -4,10 +4,10 @@ import { Platform, StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function SettingScreen() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>#Setting</Text>
+      <Text style={styles.title}>#Home</Text>
       <Text style={styles.normal}>#link to contract</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.normal}>#Logout</Text>

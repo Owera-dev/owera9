@@ -13,11 +13,11 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import SettingScreen from '../screens/SettingScreen';
+import HomeScreen from '../screens/HomeScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import MarketScreen from '../screens/MarketScreen';
+import FindScreen from '../screens/FindScreen';
 import ContactsScreen from '../screens/ContactsScreen';
-import ProvideScreen from '../screens/ProvideScreen';
+import ServeScreen from '../screens/ServeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -43,7 +43,7 @@ function RootNavigator() {
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Setting" component={SettingScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -60,24 +60,24 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Market"
+      initialRouteName="Find"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="Market"
-        component={MarketScreen}
-        options={({ navigation }: RootTabScreenProps<'Market'>) => ({
-          title: 'Market',
+        name="Find"
+        component={FindScreen}
+        options={({ navigation }: RootTabScreenProps<'Find'>) => ({
+          title: 'Find',
           tabBarIcon: ({ color }) => <AntDesign name="earth" size={30} color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Setting')}
+              onPress={() => navigation.navigate('Home')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <AntDesign 
-                name="setting" 
+                name="home" 
                 size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -94,12 +94,12 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <AntDesign name="contacts" size={30} color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Setting')}
+              onPress={() => navigation.navigate('Home')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <AntDesign 
-                name="setting" 
+                name="home" 
                 size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -109,19 +109,19 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="Provide"
-        component={ProvideScreen}
-        options={({ navigation }: RootTabScreenProps<'Provide'>) => ({
-          title: 'Provide',
+        name="Serve"
+        component={ServeScreen}
+        options={({ navigation }: RootTabScreenProps<'Serve'>) => ({
+          title: 'Serve',
           tabBarIcon: ({ color }) => <AntDesign name="rocket1" size={30} color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Setting')}
+              onPress={() => navigation.navigate('Home')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <AntDesign 
-                name="setting" 
+                name="home" 
                 size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}

@@ -15,14 +15,14 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          Market: {
+          Find: {
             screens: {
-              MarketScreen: 'one',
+              FindScreen: 'one',
             },
           },
-          Provide: {
+          Serve: {
             screens: {
-              ProvideScreen: 'two',
+              ServeScreen: 'two',
             },
           },
           Contacts: {
@@ -32,7 +32,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
         },
       },
-      Setting: 'modal',
+      Home: 'modal',
       NotFound: '*',
     },
   },

@@ -4,7 +4,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function MarketScreen({ navigation }: RootTabScreenProps<'Market'>) {
+export default function FindScreen({ navigation }: RootTabScreenProps<'Find'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>#listed offers</Text>
