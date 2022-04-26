@@ -8,8 +8,10 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>#Home</Text>
+
       <Text style={styles.normal}>#link to contract</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      
       <Text style={styles.normal}>#Logout</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.normal}>#send mail to delete account and data</Text>

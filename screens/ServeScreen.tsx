@@ -22,7 +22,7 @@ export default function ServeScreen() {
       <Text style={styles.title}>#About</Text>
       <Text style={styles.normal}>#Language selector (activate or disactivate single language)</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>#Invite contacts</Text>
+      <Text style={styles.title}>float(#Invite contacts)</Text>
       <Text style={styles.normal}>#Link to send invitation (as saved contact) #QR code</Text>
     </View>
   );

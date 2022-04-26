@@ -4,10 +4,10 @@ import { Platform, StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function CallendforcustomerScreen() {
+export default function IncommingcallScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>#CallendforcustomerScreen</Text>
+      <Text style={styles.title}>#IncommingcallScreen</Text>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
