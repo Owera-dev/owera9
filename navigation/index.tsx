@@ -15,6 +15,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import SettingScreen from '../screens/SettingScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import MarketScreen from '../screens/MarketScreen';
+import ContactsScreen from '../screens/ContactsScreen';
 import ProvideScreen from '../screens/ProvideScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -67,6 +68,28 @@ function BottomTabNavigator() {
         component={MarketScreen}
         options={({ navigation }: RootTabScreenProps<'Market'>) => ({
           title: 'Market',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerRight: () => (
+            <Pressable
+              onPress={() => navigation.navigate('Setting')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="info-circle"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginRight: 15 }}
+              />
+            </Pressable>
+          ),
+        })}
+      />
+      <BottomTab.Screen
+        name="Contacts"
+        component={ProvideScreen}
+        options={({ navigation }: RootTabScreenProps<'Contacts'>) => ({
+          title: 'Contacts',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Pressable

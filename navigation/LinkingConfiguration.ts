@@ -25,6 +25,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               ProvideScreen: 'two',
             },
           },
+          Contacts: {
+            screens: {
+              ContactsScreen: 'tree',
+            },
+          },
         },
       },
       Setting: 'modal',
