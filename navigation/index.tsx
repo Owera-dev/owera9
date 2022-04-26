@@ -13,11 +13,19 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+
 import HomeScreen from '../screens/HomeScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import FindScreen from '../screens/FindScreen';
 import ContactsScreen from '../screens/ContactsScreen';
 import ServeScreen from '../screens/ServeScreen';
+import CallendforcustomerScreen from '../screens/CallendforcustomerScreen';
+import CallendproviderScreen from '../screens/CallendproviderScreen';
+import ContractScreen from '../screens/ContractScreen';
+import IncommingcallScreen from '../screens/IncommingcallScreen';
+import LoginScreen from '../screens/LoginScreen';
+import SignupScreen from '../screens/SignupScreen';
+
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -42,12 +50,19 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Callendforcustomer" component={CallendforcustomerScreen} />
+      <Stack.Screen name="Callendprovider" component={CallendproviderScreen} />
+      <Stack.Screen name="Contract" component={ContractScreen} />
+      <Stack.Screen name="Incommingcall" component={IncommingcallScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
 }
+
 
 /**
  * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
@@ -69,7 +84,7 @@ function BottomTabNavigator() {
         component={FindScreen}
         options={({ navigation }: RootTabScreenProps<'Find'>) => ({
           title: 'Find',
-          tabBarIcon: ({ color }) => <AntDesign name="earth" size={30} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="earth" size={25} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Home')}
@@ -91,7 +106,7 @@ function BottomTabNavigator() {
         component={ContactsScreen}
         options={({ navigation }: RootTabScreenProps<'Contacts'>) => ({
           title: 'Contacts',
-          tabBarIcon: ({ color }) => <AntDesign name="contacts" size={30} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="hearto" size={25} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Home')}
@@ -113,7 +128,7 @@ function BottomTabNavigator() {
         component={ServeScreen}
         options={({ navigation }: RootTabScreenProps<'Serve'>) => ({
           title: 'Serve',
-          tabBarIcon: ({ color }) => <AntDesign name="rocket1" size={30} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="rocket1" size={25} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Home')}
