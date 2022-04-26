@@ -3,6 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
+ import { AntDesign } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
@@ -68,16 +69,16 @@ function BottomTabNavigator() {
         component={MarketScreen}
         options={({ navigation }: RootTabScreenProps<'Market'>) => ({
           title: 'Market',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="earth" size={30} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Setting')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
+              <AntDesign 
+                name="setting" 
+                size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
               />
@@ -90,16 +91,16 @@ function BottomTabNavigator() {
         component={ContactsScreen}
         options={({ navigation }: RootTabScreenProps<'Contacts'>) => ({
           title: 'Contacts',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="contacts" size={30} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Setting')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
+              <AntDesign 
+                name="setting" 
+                size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
               />
@@ -112,16 +113,16 @@ function BottomTabNavigator() {
         component={ProvideScreen}
         options={({ navigation }: RootTabScreenProps<'Provide'>) => ({
           title: 'Provide',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="rocket1" size={30} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Setting')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
+              <AntDesign 
+                name="setting" 
+                size={25} 
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
               />
