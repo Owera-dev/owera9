@@ -16,8 +16,8 @@ import useColorScheme from '../hooks/useColorScheme';
 
 import HomeScreen from '../screens/HomeScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import FindScreen from '../screens/FindScreen';
-import ContactsScreen from '../screens/ContactsScreen';
+import SearchScreen from '../screens/SearchScreen';
+import SavedScreen from '../screens/SavedScreen';
 import ServeScreen from '../screens/ServeScreen';
 import CallendforcustomerScreen from '../screens/CallendforcustomerScreen';
 import CallendproviderScreen from '../screens/CallendproviderScreen';
@@ -75,15 +75,15 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Find"
+      initialRouteName="Search"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="Find"
-        component={FindScreen}
-        options={({ navigation }: RootTabScreenProps<'Find'>) => ({
-          title: 'Find',
+        name="Search"
+        component={SearchScreen}
+        options={({ navigation }: RootTabScreenProps<'Search'>) => ({
+          title: 'Search',
           tabBarIcon: ({ color }) => <AntDesign name="earth" size={25} color={color} />,
           headerRight: () => (
             <Pressable
@@ -102,10 +102,10 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="Contacts"
-        component={ContactsScreen}
-        options={({ navigation }: RootTabScreenProps<'Contacts'>) => ({
-          title: 'Contacts',
+        name="Saved"
+        component={SavedScreen}
+        options={({ navigation }: RootTabScreenProps<'Saved'>) => ({
+          title: 'Saved',
           tabBarIcon: ({ color }) => <AntDesign name="hearto" size={25} color={color} />,
           headerRight: () => (
             <Pressable

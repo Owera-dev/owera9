@@ -4,11 +4,11 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function FindScreen({ navigation }: RootTabScreenProps<'Find'>) {
+export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>#listed offers</Text>
-      <Text style={styles.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of contacts, name and prename,) #Ratings #Add service to contacts #Purch service #searchword input</Text>
+      <Text style={styles.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of Saved, name and prename,) #Ratings #Add service to Saved #Purch service #searchword input</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
   );

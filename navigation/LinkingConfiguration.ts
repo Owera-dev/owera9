@@ -15,9 +15,9 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          Find: {
+          Search: {
             screens: {
-              FindScreen: 'one',
+              SearchScreen: 'one',
             },
           },
           Serve: {
@@ -25,9 +25,9 @@ const linking: LinkingOptions<RootStackParamList> = {
               ServeScreen: 'two',
             },
           },
-          Contacts: {
+          Saved: {
             screens: {
-              ContactsScreen: 'tree',
+              SavedScreen: 'tree',
             },
           },
         },
