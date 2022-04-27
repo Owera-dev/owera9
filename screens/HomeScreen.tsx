@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
       <Text style={styles.normal}>To create a phonebook where professionals get videocalled.</Text>
       <View style={styles.separator}/>
       <Button 
-        title="got to contract"
+        title="legal matters"
         onPress={() => navigation.navigate("Contract")}
       />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
