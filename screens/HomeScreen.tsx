@@ -7,20 +7,23 @@ import { Text, View } from '../components/Themed';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>#Home</Text>
-
+      <Text style={styles.logo}>owera</Text>
+      <View style={styles.separator}/>
+      <Text style={styles.title}>Why</Text>
+      <Text style={styles.normal}>To have always and instant any kind of professional online available.</Text>
+      <View style={styles.separator}/>
+      <Text style={styles.title}>How</Text>
+      <Text style={styles.normal}>To create a phonebook where professionals get videocalled.</Text>
+      <View style={styles.separator}/>
       <Text style={styles.normal}>#link to contract</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      
       <Text style={styles.normal}>#Logout</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.normal}>#send mail to delete account and data</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.normal}>#Mission Vision #Questions</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.normal}>#Questions</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      {/* Use a light status bar on iOS to account for the black space above the modal */}
+      <Text style={styles.incorporation}>OWERA ltd inc. 2022     #We love our users</Text>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
@@ -39,6 +42,16 @@ const styles = StyleSheet.create({
   normal: {
     fontSize: 15,
     fontWeight: 'normal',
+  },
+  incorporation: {
+    fontSize: 15,
+    fontWeight: 'normal',
+    color: "grey",
+  },
+  logo: {
+    fontSize: 100,
+    fontWeight: 'normal',
+    color: "#2f95dc",
   },
   separator: {
     marginVertical: 30,
