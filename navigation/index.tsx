@@ -48,16 +48,45 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Screen name="Callendforcustomer" component={CallendforcustomerScreen} />
-      <Stack.Screen name="Callendprovider" component={CallendproviderScreen} />
-      <Stack.Screen name="Contract" component={ContractScreen} />
-      <Stack.Screen name="Incommingcall" component={IncommingcallScreen} />
-      <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Signup" component={SignupScreen} />
+      <Stack.Screen 
+        name="Root" 
+        component={BottomTabNavigator} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen 
+        name="NotFound" 
+        component={NotFoundScreen} 
+        options={{ title: 'Oops!' }} 
+      />
+      <Stack.Screen 
+        name="Callendforcustomer" 
+        component={CallendforcustomerScreen} 
+      />
+      <Stack.Screen 
+        name="Callendprovider" 
+        component={CallendproviderScreen} 
+      />
+      <Stack.Screen 
+        name="Incommingcall" 
+        component={IncommingcallScreen} 
+      />
+      <Stack.Screen 
+        name="Login" 
+        component={LoginScreen} 
+      />
+      <Stack.Screen 
+        name="Signup" 
+        component={SignupScreen} 
+      />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen 
+          name="Home" 
+          component={HomeScreen} 
+          />
+        <Stack.Screen 
+          name="Contract" 
+          component={ContractScreen} 
+        />
       </Stack.Group>
     </Stack.Navigator>
   );
