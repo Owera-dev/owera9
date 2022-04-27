@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -9,7 +9,35 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
     <View style={styles.container}>
       <Text style={styles.title}>#listed offers</Text>
       <Text style={styles.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of Saved, name and prename,) #Ratings #Add service to Saved #Purch service #searchword input</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+
+
+      <Button 
+          title="Signup"
+          onPress={() => navigation.navigate("Signup")}
+          />
+      <Button 
+          title="Login"
+          onPress={() => navigation.navigate("Login")}
+          />
+      <Button 
+          title="Incommingcall"
+          onPress={() => navigation.navigate("Incommingcall")}
+          />
+      <Button 
+          title="NotFound"
+          onPress={() => navigation.navigate("NotFound")}
+          />
+      <Button 
+          title="Callendforcustomer"
+          onPress={() => navigation.navigate("Callendforcustomer")}
+          />
+      <Button 
+          title="Callendprovider"
+          onPress={() => navigation.navigate("Callendprovider")}
+          />
+
+
+
     </View>
   );
 }

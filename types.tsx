@@ -23,6 +23,7 @@ export type RootStackParamList = {
   Incommingcall: undefined;
   Login: undefined;
   Signup: undefined;
+  Createdservices: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

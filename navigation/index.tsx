@@ -25,7 +25,7 @@ import ContractScreen from '../screens/ContractScreen';
 import IncommingcallScreen from '../screens/IncommingcallScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
-
+import CreatedservicesScreen from '../screens/CreatedservicesScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -84,6 +84,10 @@ function RootNavigator() {
           component={HomeScreen} 
           />
         <Stack.Screen 
+          name="Createdservices" 
+          component={CreatedservicesScreen} 
+          />
+        <Stack.Screen 
           name="Contract" 
           component={ContractScreen} 
         />
@@ -135,7 +139,7 @@ function BottomTabNavigator() {
         component={SavedScreen}
         options={({ navigation }: RootTabScreenProps<'Saved'>) => ({
           title: 'Saved',
-          tabBarIcon: ({ color }) => <AntDesign name="hearto" size={25} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="heart" size={25} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Home')}

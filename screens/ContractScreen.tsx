@@ -6,6 +6,7 @@ export default function ContractScreen({ navigation }: RootStackScreenProps<'Con
   return (
     <View style={styles.container}>
         <ScrollView>
+          <Button title="delete account and stored data" onPress={() => null} />
           <Text style={styles.normal}>User Agreement
  
  Owera’s General Terms and Conditions of Use
@@ -278,9 +279,10 @@ export default function ContractScreen({ navigation }: RootStackScreenProps<'Con
   
  If you do have any question about the User Agreement or about the functioning of the Website, feel free to reach us through the Website’s Feedback Section. Owera’s Team would be happy to help you and/or to have your feedback! 
  </Text>
+
         </ScrollView>
       <View style={styles.separator} />
-      <Button title="back" onPress={() => navigation.goBack()} />
+        <Button title="back" onPress={() => navigation.goBack()} />
       <View style={styles.separator} />
     </View>
   );
