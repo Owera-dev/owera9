@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function HomeScreen() {
+import * as React from 'react';
+import { Button } from 'react-native';
+import { RootStackScreenProps } from '../types';
+
+
+export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>owera</Text>
@@ -15,7 +18,10 @@ export default function HomeScreen() {
       <Text style={styles.title}>How</Text>
       <Text style={styles.normal}>To create a phonebook where professionals get videocalled.</Text>
       <View style={styles.separator}/>
-      <Text style={styles.normal}>#link to contract</Text>
+      <Button 
+        title="got to contract"
+        onPress={() => navigation.navigate("Contract")}
+      />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.normal}>#Logout</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />

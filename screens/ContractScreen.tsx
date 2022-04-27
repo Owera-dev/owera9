@@ -1,12 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
+import { RootStackScreenProps } from '../types';
 
-export default function ContractScreen() {
+export default function ContractScreen({ navigation }: RootStackScreenProps<'Contract'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Terms and Conditions</Text>
       <Text style={styles.normal}>Contract text</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
 }
