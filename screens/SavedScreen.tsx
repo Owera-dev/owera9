@@ -31,7 +31,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
-        placeholder="search saved services"
+        placeholder="search"
       />
     </View>
   );

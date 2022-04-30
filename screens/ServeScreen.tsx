@@ -88,7 +88,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
         <Pressable 
           onPress={() => null}
           style={styles.fab}>
-          <Text style={styles.floatbuttontexttitle}>send invitation</Text>
+          <Text style={styles.floatbuttontexttitle}>Send invitation</Text>
           <Text style={styles.floatbuttontext}>you got 123 times saved</Text>
         </Pressable>
     </View>

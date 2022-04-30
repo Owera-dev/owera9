@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Button } from 'react-native';
 import { RootStackScreenProps } from '../types';
-
+import { AntDesign } from '@expo/vector-icons'; 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
@@ -10,7 +10,12 @@ export default function CreatedservicesScreen({ navigation }: RootStackScreenPro
     <View style={styles.container}>
       <Text style={styles.normal}>#all created services(on press to edit mode)</Text>
       <Text style={styles.normal}>#if no service: "no services jet"</Text>
-      <Button title="back" onPress={() => navigation.goBack()} />
+      <AntDesign 
+        onPress={() => navigation.goBack()}
+        name="down" 
+        size={40} 
+        color="black"
+        />
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
