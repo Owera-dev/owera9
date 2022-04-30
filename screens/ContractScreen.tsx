@@ -1,12 +1,13 @@
 import { StyleSheet, Button, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
+import { AntDesign } from '@expo/vector-icons'; 
+
 
 export default function ContractScreen({ navigation }: RootStackScreenProps<'Contract'>) {
   return (
     <View style={styles.container}>
         <ScrollView>
-          <Button title="delete account and stored data" onPress={() => null} />
           <Text style={styles.normal}>User Agreement
  
  Owera’s General Terms and Conditions of Use
@@ -282,7 +283,12 @@ export default function ContractScreen({ navigation }: RootStackScreenProps<'Con
 
         </ScrollView>
       <View style={styles.separator} />
-        <Button title="back" onPress={() => navigation.goBack()} />
+        <AntDesign 
+        onPress={() => navigation.goBack()}
+        name="left" 
+        size={40} 
+        color="black"
+      />
       <View style={styles.separator} />
     </View>
   );
