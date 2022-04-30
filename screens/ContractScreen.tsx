@@ -285,7 +285,7 @@ export default function ContractScreen({ navigation }: RootStackScreenProps<'Con
       <View style={styles.separator} />
         <AntDesign 
         onPress={() => navigation.goBack()}
-        name="left" 
+        name="down" 
         size={40} 
         color="black"
       />

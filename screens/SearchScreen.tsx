@@ -1,10 +1,12 @@
-import { StyleSheet, Button, ScrollView } from 'react-native';
+import { StyleSheet, Button, ScrollView, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import * as React from 'react';
 
 export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
+  const [text, onChangeText] = React.useState("");
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -37,6 +39,12 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           title="Callendprovider"
           onPress={() => navigation.navigate("Callendprovider")}
           />
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+        placeholder="search"
+      />
     </View>
   );
 }
@@ -59,5 +67,12 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 20,
   },
 });

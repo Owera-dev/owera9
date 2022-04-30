@@ -14,21 +14,33 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
         <Text style={styles.logo}>owera</Text>
         <Text style={styles.incorporation}>OWERA ltd inc. 2022     #We love our users</Text>
         <View style={styles.separator}/>
-        <Text style={styles.title}>Why</Text>
-        <Text style={styles.normal}>To have always and instant any kind of professional online available.</Text>
+        <Text style={styles.normal}>why</Text>
+        <Text style={styles.title}>
+          Because the world is getting better{"\n"} 
+          by collaborating more.</Text>
         <View style={styles.separator}/>
-        <Text style={styles.title}>How</Text>
-        <Text style={styles.normal}>To create a phonebook where professionals get videocalled.</Text>
+
+        <Text style={styles.normal}>how</Text>
+        <Text style={styles.title}>By creating a phonebook where professionals can get videocalled.</Text>
         <View style={styles.separator}/>
+
+        <Text style={styles.normal}>my benefit</Text>
+        <Text style={styles.title}>
+          Having always, instant & anywhere{"\n"}
+          any professional{"\n"}
+          through videocall available.</Text>
+        <View style={styles.separator}/>
+
         <Button title="legal matters" onPress={() => navigation.navigate("Contract")} />
         <Button title="Logout" onPress={() => navigation.navigate("Login")} />
       </ScrollView>
       <AntDesign 
         onPress={() => navigation.goBack()}
-        name="left" 
+        name="down" 
         size={40} 
         color="black"
         />
+        <View style={styles.separator}/>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
