@@ -47,7 +47,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
     <View style={styles.container}>
       <View style={styles.margins}>
           <ScrollView>
-            <Text style={styles.title}>creating new video-service</Text>
+            <Text style={styles.title}>new video-service</Text>
             <ScrollView horizontal={true} style={styles.horizontallist}>
               <View style={styles.alignitems}>
                 <Pressable 
@@ -102,13 +102,13 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           <ScrollView horizontal={true} style={styles.horizontallist}>
             <View style={styles.alignitems}>
               <AppButtonlink title="edit services"/>
-              <AppButtonlink title="payout earnings" />
+              <AppButtonlink title="payout" />
             </View>
           </ScrollView>
           <ScrollView horizontal={true}>
             <View style={styles.alignitems}>
               <AppButtonlink title="spoken languages" />
-              <AppButtonlink title="earn time" />
+              <AppButtonlink title="availability" />
             </View>
           </ScrollView>
 
@@ -121,20 +121,12 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
               criteriadislikes="456"
             />
           </ScrollView>
-
-          <View style={styles.separator}/>
-          
-          <AntDesign 
-          onPress={() => navigation.navigate("Search")}
-          name="left" 
-          size={40} 
-          color="black"
-          />
-          <View style={styles.separator}/>
+          <View style={styles.separator} />
+          <View style={styles.separator} />
         </ScrollView>
         <Pressable 
             onPress={() => null}
-            style={styles.fab}>
+            style={styles.floatingprimebottom}>
             <Text style={styles.floatbuttontexttitle}>send invitation</Text>
             <Text style={styles.floatbuttontext}>you got 123 times saved</Text>
           </Pressable>
@@ -161,7 +153,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   margins: {
-    marginTop: 60,
+    marginTop: 0,
   },
   uploadfield: {
     borderRadius: 20,
@@ -250,12 +242,6 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: "white",
   },
-  fab: {
-    padding: 10,
-    backgroundColor: "orange",
-    borderRadius: 20,
-    margin: 10,
-  },
   appButtondefault: {
     fontSize: 15,
     paddingVertical: 10,
@@ -308,4 +294,14 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     shadowOffset: { width: 0, height: 2 },
   },
+  floatingprimebottom: {
+    justifyContent: "center",
+    borderRadius: 20,
+    position: "absolute",
+    bottom: 10,
+    left: 10,
+    backgroundColor: "orange",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+},
 });
