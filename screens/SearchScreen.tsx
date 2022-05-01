@@ -45,6 +45,14 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
         value={text}
         placeholder="search"
       />
+      <View style={styles.center}>
+        <TextInput
+          style={styles.floatbuttonsearch}
+          onChangeText={onChangeText}
+          value={text}
+          placeholder="search"
+        />
+      </View>
     </View>
   );
 }
@@ -54,6 +62,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  center: {
+    alignItems: 'center',
   },
   title: {
     fontSize: 20,
@@ -75,4 +86,19 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
   },
+  floatbuttonsearch: {
+    justifyContent: "center",
+    borderRadius: 20,
+    position: "absolute",
+    bottom: 10,
+    borderWidth: 3,
+    borderColor: "lightgrey",
+    backgroundColor: "white",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.20,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+},
 });
