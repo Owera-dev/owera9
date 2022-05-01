@@ -127,7 +127,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
         <Pressable 
             onPress={() => null}
             style={styles.floatingprimebottom}>
-            <Text style={styles.floatbuttontexttitle}>send invitation</Text>
+            <Text style={styles.floatbuttontexttitle}>Send invitation</Text>
             <Text style={styles.floatbuttontext}>you got 123 times saved</Text>
           </Pressable>
       </View>
@@ -294,13 +294,13 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
   },
   floatingprimebottom: {
-    justifyContent: "center",
     borderRadius: 20,
     position: "absolute",
     bottom: 10,
-    left: 10,
+    left: "10%",
+    right: "10%",
     backgroundColor: "orange",
-    paddingHorizontal: 20,
     paddingVertical: 10,
+    alignItems: 'center',
 },
 });
