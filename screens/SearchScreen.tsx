@@ -7,6 +7,8 @@ import * as React from 'react';
 
 export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
   const [text, onChangeText] = React.useState("");
+
+  
   return (
     <View style={styles.container}>
       <ScrollView>
