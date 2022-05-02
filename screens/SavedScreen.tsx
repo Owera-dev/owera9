@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   },
   appButtoncall: {
     alignSelf: 'flex-start',
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     paddingVertical: 5,
     marginVertical: 10,
     marginHorizontal: 10,
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   appButtoncalloffline: {
     alignSelf: 'flex-start',
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     paddingVertical: 5,
     marginVertical: 10,
     marginHorizontal: 10,

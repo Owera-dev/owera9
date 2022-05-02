@@ -101,7 +101,8 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
           <ScrollView horizontal={true} style={styles.horizontallist}>
             <View style={styles.alignitems}>
-              <AppButtonlink title="edit services"/>
+              <AppButtonlink 
+                title="edit services"/>
               <AppButtonlink title="payout" />
             </View>
           </ScrollView>

@@ -1,4 +1,4 @@
-import { StyleSheet, Button, ScrollView, TextInput } from 'react-native';
+import { StyleSheet, Button, ScrollView, TextInput, TouchableOpacity, Pressable  } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -8,10 +8,44 @@ import * as React from 'react';
 export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
   const [text, onChangeText] = React.useState("");
 
+  const Offerdisplay = () => (
+    <View>
+      <View style={styles.offercontainer}>
+        <View style={styles.offernavigationbackground}>
+          <Pressable style={styles.appButtoncall}>
+            <AntDesign name="videocamera" size={30} color="white"/>
+          </Pressable>
+          <View style={styles.offernavigationlength}>
+            <ScrollView horizontal={true} style={styles.scrollviewofferoptions}>
+
+            <Pressable style={styles.appButtondefault}>
+              <AntDesign name="shoppingcart" size={30} color="black"/>
+            </Pressable>
+            <View style={styles.separatorsmall}/>
+            <Pressable style={styles.appButtondefault}>
+              <AntDesign name="user" size={30} color="black"/>
+            </Pressable>
+            <View style={styles.separatorsmall}/>
+            <Pressable style={styles.appButtondefault}>
+              <AntDesign name="staro" size={30} color="black"/>
+            </Pressable>
+            <View style={styles.separatorsmall}/>
+            <Pressable style={styles.appButtondefault}>
+              <AntDesign name="hearto" size={30} color="black"/>
+            </Pressable>
+
+            </ScrollView>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
   
   return (
     <View style={styles.container}>
       <ScrollView>
+      <Offerdisplay />
+      <Offerdisplay />
       <AntDesign 
         onPress={() => navigation.navigate("Callendforcustomer")}
         name="videocamera" 
@@ -20,7 +54,7 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
       />
       <Text style={styles.title}>service title</Text>
       <Text style={styles.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of Saved, name and prename,) #Ratings #Add service to Saved #Purch service #searchword input</Text>
-      </ScrollView>
+      
       <Button 
           title="Login"
           onPress={() => navigation.navigate("Login")}
@@ -41,12 +75,7 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           title="Callendprovider"
           onPress={() => navigation.navigate("Callendprovider")}
           />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-        placeholder="search"
-      />
+      </ScrollView>
       <View style={styles.center}>
         <TextInput
           style={styles.floatbuttonsearch}
@@ -65,6 +94,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  offercontainer: {
+    backgroundColor: "lightgrey",
+    width: '95%',
+    height: 600,
+    borderRadius: 20,
+    marginBottom: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.40,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+  },
   center: {
     alignItems: 'center',
   },
@@ -76,10 +116,35 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'normal',
   },
+  offernavigationlength: {
+    alignSelf: 'flex-start',
+    borderRadius: 20,
+    marginHorizontal: 5,
+  },
   separator: {
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  separatorsmall: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    width: 10,
+  },
+  scrollviewofferoptions: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    borderRadius: 20,
+  },
+  offernavigationbackground: {
+    justifyContent: "center",
+    backgroundColor: 'rgba(0,0,0,0)',
+    position: "absolute",
+    bottom: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    alignSelf: 'flex-start',
+    borderRadius: 40,
+    flexDirection: "row",
+    marginLeft: 10,
   },
   input: {
     height: 40,
@@ -102,5 +167,39 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.20,
     shadowRadius: 3,
     shadowOffset: { width: 0, height: 2 },
+},
+appButtonprime: {
+  fontSize: 15,
+  paddingVertical: 10,
+  paddingHorizontal: 15,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginVertical: 5,
+  shadowColor: "#000",
+  shadowOpacity: 0.20,
+  shadowRadius: 3,
+  backgroundColor: "orange",
+  shadowOffset: { width: 0, height: 2 },
+},
+appButtondefault: {
+  paddingHorizontal: 15,
+  paddingVertical: 5,
+  borderRadius: 20,
+  shadowColor: "#000",
+  shadowOpacity: 0.20,
+  shadowRadius: 3,
+  backgroundColor: "white",
+  shadowOffset: { width: 0, height: 2 },
+},
+appButtoncall: {
+  paddingHorizontal: 15,
+  paddingVertical: 5,
+  marginVertical: 0,
+  borderRadius: 20,
+  backgroundColor: "orange",
+  shadowColor: "#000",
+  shadowOpacity: 0.20,
+  shadowRadius: 3,
+  shadowOffset: { width: 0, height: 2 },
 },
 });
