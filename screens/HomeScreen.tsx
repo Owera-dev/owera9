@@ -29,6 +29,8 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
             any professional{"\n"}
             through videocall available.</Text>
           <View style={styles.separator}/>
+        </View>
+        <View style={styles.center}>
           <View style={styles.alignitems}>
             <Pressable onPress={() => navigation.navigate("Contract")} style={styles.appButtondefault}>
               <Text>Log out</Text>
@@ -37,7 +39,9 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
               <Text>legal</Text>
             </Pressable>
           </View>
-          <Text style={styles.incorporation}>OWERA ltd inc. 2022     #We love our users</Text>
+          <View style={styles.separatorsmall}/>
+          <Text style={styles.incorporation}>OWERA ltd inc. 2022</Text>
+          <Text style={styles.incorporation}>#We love our users.</Text>
         </View>
       </ScrollView>
       <View style={styles.center}>
@@ -60,6 +64,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignItems: 'center',
+    justifyContent: "center",
   },
   left: {
     marginLeft: 10,
@@ -89,6 +94,10 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  separatorsmall: {
+    marginVertical: 10,
+    height: 0,
   },
   alignitems: {
     flexDirection: "row",
