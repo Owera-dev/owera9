@@ -15,7 +15,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
     <TouchableOpacity style={designpattern.buttondefault}>
       <View style={designpattern.alignitems}>
         <AntDesign name="right" size={20} />
-        <Text>{ title }</Text>
+        <Text>  { title }</Text>
       </View>
     </TouchableOpacity>
   );
@@ -36,7 +36,9 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
     <View style={designpattern.container}>
       <View>
           <ScrollView>
+          <Pressable style={designpattern.buttondefault} >
             <Text style={designpattern.title}>new video-service</Text>
+          </Pressable>
             <ScrollView horizontal={true}>
               <View style={designpattern.alignitems}>
                 <Pressable 
@@ -82,14 +84,17 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                 placeholder="select currency"
               />
               <Pressable onPress={() => null} style={designpattern.buttonprimary} >
-                <Text style={designpattern.buttonprimary}>save service</Text>
+                <Text style={designpattern.normaltextprimebutton}>save service</Text>
               </Pressable>
               <Pressable onPress={() => null} style={designpattern.buttonprimary} >
-                <Text style={designpattern.buttonprimary}>delete service</Text>
+                <Text style={designpattern.normaltextprimebutton}>delete service</Text>
               </Pressable>
             </ScrollView>
           <View style={designpattern.separator} />
-          <Text style={designpattern.title}>actions</Text>
+
+          <Pressable style={designpattern.buttondefault} >
+            <Text style={designpattern.title}>actions</Text>
+          </Pressable>
 
           <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
@@ -103,9 +108,11 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
               <Actions title="availability"/>
             </View>
           </ScrollView>
-
           <View style={designpattern.separator} />
-          <Text style={designpattern.title}>feedback to improve</Text>
+
+          <Pressable style={designpattern.buttondefault} >
+            <Text style={designpattern.title}>feedback to improve</Text>
+          </Pressable>
           <ScrollView horizontal={true}>
             <Ratingitem title="friendly" criterialikes="123" criteriadislikes="456" />
             <Ratingitem title="nasty" criterialikes="2345" criteriadislikes="345" />
