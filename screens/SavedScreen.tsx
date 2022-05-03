@@ -28,7 +28,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
         <View style={designpattern.alignitems}>
           <AppButtoncall />
-            <View style={designpattern.servicedatacontainer}>
+            <View style={designpattern.savedservicelist}>
               <Text style={designpattern.title}>service title</Text>
               <View style={designpattern.alignitems}>
                 <Text style={designpattern.normal}>13.20 chf /h   </Text>
@@ -41,7 +41,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
       <View style={designpattern.alignitems}>
           <AppButtoncalloffline />
-            <View style={designpattern.servicedatacontainer}>
+            <View style={designpattern.savedservicelist}>
               <Text style={designpattern.title}>service title</Text>
               <View style={designpattern.alignitems}>
                 <Text style={designpattern.normal}>13.20 chf /h   </Text>

@@ -1,44 +1,49 @@
 import { StyleSheet } from 'react-native';
-
 const designpattern = StyleSheet.create({
+/**Page layout */
     container: {
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
     },
+/**Text */
     title: {
       fontSize: 20,
       fontWeight: 'bold',
     },
-    xxx: {
-        width: 40,
-        height: 40,
-        backgroundColor: "blue",
-    },
-    separator: {
-      marginVertical: 30,
-      height: 1,
-      width: '80%',
-    },
-    separatorsideways: {
-        backgroundColor: 'rgba(0,0,0,0)',
-        width: 10,
-    },
-      normal: {
+    normal: {
         fontSize: 15,
         fontWeight: 'normal',
       },
-    center: {
-        alignItems: 'center',
-        justifyContent: "center",
+    linkText: {
+        fontSize: 14,
+        color: '#2e78b7',
     },
-    left: {
-        marginLeft: 10,
+    textprime: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: "white",
+    },
+    floatbuttontexttitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: "white",
+    },
+    floatbuttontext: {
+        fontSize: 15,
+        fontWeight: 'normal',
+        color: "white",
     },
     incorporation: {
         fontSize: 15,
         fontWeight: 'normal',
         color: "grey",
+    },
+    uploadtext: {
+        fontSize: 15,
+        marginTop: 10,
+        fontWeight: 'normal',
+        color: "orange",
     },
     logo: {
         fontSize: 100,
@@ -48,17 +53,79 @@ const designpattern = StyleSheet.create({
         textShadowOffset: { width: 0, height: 1 },
         textShadowRadius: 6,
     },
+/**Separators */
+    separator: {
+      marginVertical: 30,
+      height: 1,
+      width: '80%',
+    },
     separatorsmall: {
         marginVertical: 10,
         height: 0,
     },
+    separatorsideways: {
+        backgroundColor: 'rgba(0,0,0,0)',
+        width: 10,
+    },
+/**placing */
+    center: {
+        alignItems: 'center',
+        justifyContent: "center",
+    },
+    left: {
+        marginLeft: 10,
+    },
     alignitems: {
         flexDirection: "row",
     },
+    imagerow: {
+        flexDirection: "row",
+    },
+    alignitemsinitem: {
+        flexDirection: "row",
+    },
+    horizontallist: {
+        marginVertical: 5,
+    },
+    spacebetweenitems: {
+        paddingRight: 10,
+    },
+    margins: {
+        marginTop: 0,
+    },
+/**buttons */
     buttonprimary: {
         marginVertical: 10,
         height: 1,
         width: '80%',
+    },
+    neutralbutton: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        borderWidth: 1,
+    },
+    floatingprimebottom: {
+        borderRadius: 20,
+        position: "absolute",
+        bottom: 10,
+        left: "10%",
+        right: "10%",
+        backgroundColor: "orange",
+        paddingVertical: 10,
+        alignItems: 'center',
+    },
+    appButtonprime: {
+        fontSize: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 20,
+        marginLeft: 10,
+        marginVertical: 5,
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        backgroundColor: "orange",
+        shadowOffset: { width: 0, height: 2 },
     },
     appButtondefault: {
         alignSelf: 'flex-start',
@@ -82,17 +149,19 @@ const designpattern = StyleSheet.create({
         shadowRadius: 3,
         backgroundColor: "white",
         shadowOffset: { width: 0, height: 2 },
-      },
-    link: {
-        marginTop: 15,
-        paddingVertical: 15,
     },
-    linkText: {
-        fontSize: 14,
-        color: '#2e78b7',
-    },
-    servicedatacontainer: {
+    appButtonfeedback: {
+        fontSize: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 20,
         marginLeft: 10,
+        marginVertical: 5,
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        backgroundColor: "white",
+        shadowOffset: { width: 0, height: 2 },
     },
     appButtoncall: {
         alignSelf: 'flex-start',
@@ -131,6 +200,20 @@ const designpattern = StyleSheet.create({
         backgroundColor: "white",
         shadowOffset: { width: 0, height: 2 },
     },
+    appButtonlink: {
+        fontSize: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 20,
+        marginLeft: 10,
+        marginVertical: 5,
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        backgroundColor: "white",
+        shadowOffset: { width: 0, height: 2 },
+    },
+/**Inputs */
     input: {
         marginLeft: 10,
         marginVertical: 5,
@@ -144,7 +227,28 @@ const designpattern = StyleSheet.create({
         shadowRadius: 3,
         backgroundColor: "white",
         shadowOffset: { width: 0, height: 2 },
-      },
+    },
+    input2: {
+        marginLeft: 10,
+        marginVertical: 5,
+        paddingVertical: 10,
+        borderWidth: 2,
+        paddingHorizontal: 15,
+        borderRadius: 20,
+        borderColor: "orange",
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        backgroundColor: "white",
+        shadowOffset: { width: 0, height: 2 },
+    },
+    input1: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 20,
+    },
     floatbuttonsearch: {
         borderRadius: 20,
         position: "absolute",
@@ -158,34 +262,13 @@ const designpattern = StyleSheet.create({
         shadowRadius: 3,
         shadowOffset: { width: 0, height: 2 },
     },
+/**Images */
     image: {
         flex: 1,
         justifyContent: "center"
     },
-    imagerow: {
-        flexDirection: "row",
-    },
-    offercontainer: {
-        backgroundColor: "lightgrey",
-        marginHorizontal: 10,
-        height: 550,
-        borderRadius: 20,
-        marginBottom: 15,
-        shadowColor: "#000",
-        shadowOpacity: 0.40,
-        shadowRadius: 3,
-        shadowOffset: { width: 0, height: 2 },
-    },
-    offernavigationlength: {
-        borderRadius: 20,
-        width: 150,
-        backgroundColor: 'rgba(0,0,0,0)',
-    },
-
-    scrollviewofferoptions: {
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderRadius: 20,
-    },
+/**Elements */
+    /**Offernavigation */
     offernavigationbackground: {
         backgroundColor: 'rgba(0,0,0,2)',
         position: "absolute",
@@ -197,39 +280,43 @@ const designpattern = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
     },
-    input1: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
+    scrollviewofferoptions: {
+        backgroundColor: 'rgba(0,0,0,0)',
         borderRadius: 20,
     },
-
-    appButtonprime: {
-        fontSize: 15,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
+    offernavigationlength: {
         borderRadius: 20,
+        width: 150,
+        backgroundColor: 'rgba(0,0,0,0)',
+    },
+    /**Offercontainer */
+    offercontainer: {
+        backgroundColor: "lightgrey",
+        marginHorizontal: 10,
+        height: 550,
+        borderRadius: 20,
+        marginBottom: 15,
+        shadowColor: "#000",
+        shadowOpacity: 0.40,
+        shadowRadius: 3,
+        shadowOffset: { width: 0, height: 2 },
+    },
+    visuals: {
+        borderRadius: 20,
+        backgroundColor: 'lightgrey',
+        width: 130,
+        height: 180,
+        alignItems: 'center',
+        alignSelf: 'flex-start',
+        justifyContent: 'center',
         marginLeft: 10,
         marginVertical: 5,
         shadowColor: "#000",
         shadowOpacity: 0.20,
         shadowRadius: 3,
-        backgroundColor: "orange",
         shadowOffset: { width: 0, height: 2 },
     },
-    alignitemsinitem: {
-        flexDirection: "row",
-    },
-    horizontallist: {
-        marginVertical: 5,
-    },
-    spacebetweenitems: {
-        paddingRight: 10,
-    },
-    margins: {
-        marginTop: 0,
-    },
+    /**no groups */
     uploadfield: {
         borderRadius: 20,
         borderWidth: 2,
@@ -247,96 +334,8 @@ const designpattern = StyleSheet.create({
         backgroundColor: "white",
         shadowOffset: { width: 0, height: 2 },
     },
-    uploadtext: {
-        fontSize: 15,
-        marginTop: 10,
-        fontWeight: 'normal',
-        color: "orange",
-    },
-    visuals: {
-        borderRadius: 20,
-        backgroundColor: 'lightgrey',
-        width: 130,
-        height: 180,
-        alignItems: 'center',
-        alignSelf: 'flex-start',
-        justifyContent: 'center',
+    savedservicelist: {
         marginLeft: 10,
-        marginVertical: 5,
-        shadowColor: "#000",
-        shadowOpacity: 0.20,
-        shadowRadius: 3,
-        shadowOffset: { width: 0, height: 2 },
-    },
-    textprime: {
-        fontSize: 15,
-        fontWeight: 'bold',
-        color: "white",
-    },
-    neutralbutton: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        borderWidth: 1,
-    },
-    input2: {
-        marginLeft: 10,
-        marginVertical: 5,
-        paddingVertical: 10,
-        borderWidth: 2,
-        paddingHorizontal: 15,
-        borderRadius: 20,
-        borderColor: "orange",
-        shadowColor: "#000",
-        shadowOpacity: 0.20,
-        shadowRadius: 3,
-        backgroundColor: "white",
-        shadowOffset: { width: 0, height: 2 },
-    },
-    floatbuttontexttitle: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: "white",
-    },
-    floatbuttontext: {
-        fontSize: 15,
-        fontWeight: 'normal',
-        color: "white",
-    },
-    appButtonlink: {
-        fontSize: 15,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        borderRadius: 20,
-        marginLeft: 10,
-        marginVertical: 5,
-        shadowColor: "#000",
-        shadowOpacity: 0.20,
-        shadowRadius: 3,
-        backgroundColor: "white",
-        shadowOffset: { width: 0, height: 2 },
-    },
-    appButtonfeedback: {
-        fontSize: 15,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        borderRadius: 20,
-        marginLeft: 10,
-        marginVertical: 5,
-        shadowColor: "#000",
-        shadowOpacity: 0.20,
-        shadowRadius: 3,
-        backgroundColor: "white",
-        shadowOffset: { width: 0, height: 2 },
-    },
-    floatingprimebottom: {
-        borderRadius: 20,
-        position: "absolute",
-        bottom: 10,
-        left: "10%",
-        right: "10%",
-        backgroundColor: "orange",
-        paddingVertical: 10,
-        alignItems: 'center',
     },
 });
   export {designpattern}
