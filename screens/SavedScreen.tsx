@@ -11,119 +11,50 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
   const [text, onChangeText] = React.useState("");
 
   const AppButtoncall = () => (
-    <TouchableOpacity style={styles.appButtoncall}>
+    <TouchableOpacity style={designpattern.appButtoncall}>
       <AntDesign name="videocamera" size={25} color="white"/>
     </TouchableOpacity>
   );
 
   const AppButtoncalloffline = () => (
-    <TouchableOpacity style={styles.appButtoncalloffline}>
+    <TouchableOpacity style={designpattern.appButtoncalloffline}>
       <AntDesign name="videocamera" size={30} color="lightgrey"/>
     </TouchableOpacity>
   );
 
   return (
-    <View style={styles.container}>
+    <View style={designpattern.container}>
       <ScrollView>
 
-        <View style={styles.alignitems}>
+        <View style={designpattern.alignitems}>
           <AppButtoncall />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
+            <View style={designpattern.servicedatacontainer}>
+              <Text style={designpattern.title}>service title</Text>
+              <View style={designpattern.alignitems}>
+                <Text style={designpattern.normal}>13.20 chf /h   </Text>
+                <Text style={designpattern.normal}>name prename</Text>
               </View>
             </View>
         </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={designpattern.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      <View style={styles.alignitems}>
+
+      <View style={designpattern.alignitems}>
           <AppButtoncalloffline />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
+            <View style={designpattern.servicedatacontainer}>
+              <Text style={designpattern.title}>service title</Text>
+              <View style={designpattern.alignitems}>
+                <Text style={designpattern.normal}>13.20 chf /h   </Text>
+                <Text style={designpattern.normal}>name prename</Text>
               </View>
             </View>
         </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncall />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncalloffline />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncall />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncalloffline />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncall />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <View style={styles.alignitems}>
-          <AppButtoncalloffline />
-            <View style={styles.servicedatacontainer}>
-              <Text style={styles.title}>service title</Text>
-              <View style={styles.alignitems}>
-                <Text style={styles.normal}>13.20 chf /h   </Text>
-                <Text style={styles.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={designpattern.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      
+      
       </ScrollView>
       <TextInput
-        style={styles.floatbuttonsearch}
+        style={designpattern.floatbuttonsearch}
         onChangeText={onChangeText}
         value={text}
         placeholder="search"
@@ -131,80 +62,3 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  center: {
-    alignItems: 'center',
-  },
-  servicedatacontainer: {
-    marginLeft: 10,
-  },
-  alignitems: {
-    flexDirection: "row",
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  normal: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  separator: {
-    marginVertical: 0,
-    height: 1,
-    width: '100%',
-  },
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 20,
-  },
-  appButtoncall: {
-    alignSelf: 'flex-start',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    marginVertical: 10,
-    marginHorizontal: 10,
-    borderRadius: 20,
-    backgroundColor: "orange",
-    shadowColor: "#000",
-    shadowOpacity: 0.20,
-    shadowRadius: 3,
-    shadowOffset: { width: 0, height: 2 },
-  },
-  appButtoncalloffline: {
-    alignSelf: 'flex-start',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    marginVertical: 10,
-    marginHorizontal: 10,
-    borderRadius: 20,
-    shadowColor: "#000",
-    shadowOpacity: 0.20,
-    shadowRadius: 3,
-    backgroundColor: "white",
-    shadowOffset: { width: 0, height: 2 },
-  },
-  floatbuttonsearch: {
-    borderRadius: 20,
-    position: "absolute",
-    left: 10,
-    top: 10,
-    backgroundColor: "white",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    shadowColor: "#000",
-    shadowOpacity: 0.20,
-    shadowRadius: 3,
-    shadowOffset: { width: 0, height: 2 },
-  },
-});
