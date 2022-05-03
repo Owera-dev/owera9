@@ -7,7 +7,7 @@ import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function IncommingcallScreen({ navigation }: RootStackScreenProps<'Home'>) {
   return (
-    <View style={styles.container}>
+    <View style={designpattern.container}>
       
       <AntDesign 
         onPress={() => null}
@@ -15,8 +15,8 @@ export default function IncommingcallScreen({ navigation }: RootStackScreenProps
         size={40} 
         color="black"
       />
-      <Text style={styles.normal}>Title of provided service</Text>
-      <Text style={styles.title}>12.50 chf /h</Text>
+      <Text style={designpattern.normal}>Title of provided service</Text>
+      <Text style={designpattern.title}>12.50 chf /h</Text>
         <AntDesign 
           name="right" 
           size={40} 
@@ -31,24 +31,3 @@ export default function IncommingcallScreen({ navigation }: RootStackScreenProps
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  normal: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

@@ -7,30 +7,9 @@ import { Text, View } from '../components/Themed';
 
 export default function CallendforcustomerScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>#CallendforcustomerScreen</Text>
+    <View style={designpattern.container}>
+      <Text style={designpattern.title}>#CallendforcustomerScreen</Text>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  normal: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

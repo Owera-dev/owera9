@@ -8,9 +8,9 @@ import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function CreatedservicesScreen({ navigation }: RootStackScreenProps<'Createdservices'>) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.normal}>#all created services(on press to edit mode)</Text>
-      <Text style={styles.normal}>#if no service: "no services jet"</Text>
+    <View style={designpattern.container}>
+      <Text style={designpattern.normal}>#all created services(on press to edit mode)</Text>
+      <Text style={designpattern.normal}>#if no service: "no services jet"</Text>
       <AntDesign 
         onPress={() => navigation.goBack()}
         name="down" 
@@ -21,24 +21,3 @@ export default function CreatedservicesScreen({ navigation }: RootStackScreenPro
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  normal: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

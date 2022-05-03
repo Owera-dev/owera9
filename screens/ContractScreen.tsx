@@ -7,9 +7,9 @@ import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function ContractScreen({ navigation }: RootStackScreenProps<'Contract'>) {
   return (
-    <View style={styles.container}>
+    <View style={designpattern.container}>
         <ScrollView>
-          <Text style={styles.normal}>User Agreement
+          <Text style={designpattern.normal}>User Agreement
  
  Owera’s General Terms and Conditions of Use
      
@@ -283,35 +283,14 @@ export default function ContractScreen({ navigation }: RootStackScreenProps<'Con
  </Text>
 
         </ScrollView>
-      <View style={styles.separator} />
         <AntDesign 
         onPress={() => navigation.goBack()}
         name="down" 
         size={40} 
         color="black"
       />
-      <View style={styles.separator} />
+      <View style={designpattern.separator} />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  normal: {
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
