@@ -11,7 +11,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
   const AppButtoncall = () => (
     <TouchableOpacity style={styles.appButtoncall}>
-      <AntDesign name="videocamera" size={30} color="white"/>
+      <AntDesign name="videocamera" size={25} color="white"/>
     </TouchableOpacity>
   );
 
@@ -121,14 +121,12 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
         </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       </ScrollView>
-      <View style={styles.center}>
-        <TextInput
-          style={styles.floatbuttonsearch}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="search"
-        />
-      </View>
+      <TextInput
+        style={styles.floatbuttonsearch}
+        onChangeText={onChangeText}
+        value={text}
+        placeholder="search"
+      />
     </View>
   );
 }
@@ -196,12 +194,10 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
   },
   floatbuttonsearch: {
-    justifyContent: "center",
     borderRadius: 20,
     position: "absolute",
-    bottom: 10,
-    borderWidth: 3,
-    borderColor: "lightgrey",
+    left: 10,
+    top: 10,
     backgroundColor: "white",
     paddingHorizontal: 20,
     paddingVertical: 10,
@@ -209,5 +205,5 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.20,
     shadowRadius: 3,
     shadowOffset: { width: 0, height: 2 },
-},
+  },
 });

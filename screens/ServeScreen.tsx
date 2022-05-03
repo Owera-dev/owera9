@@ -304,4 +304,17 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     alignItems: 'center',
 },
+  floatbuttonsearch: {
+    borderRadius: 20,
+    position: "absolute",
+    left: 10,
+    top: 10,
+    backgroundColor: "white",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.20,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+  },
 });
