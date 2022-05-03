@@ -20,6 +20,10 @@ const designpattern = StyleSheet.create({
       height: 1,
       width: '80%',
     },
+    separatorsideways: {
+        backgroundColor: 'rgba(0,0,0,0)',
+        width: 10,
+    },
       normal: {
         fontSize: 15,
         fontWeight: 'normal',
@@ -69,6 +73,16 @@ const designpattern = StyleSheet.create({
         backgroundColor: "white",
         shadowOffset: { width: 0, height: 2 },
     },
+    appButtondefault2: {
+        paddingHorizontal: 15,
+        paddingVertical: 5,
+        borderRadius: 20,
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        backgroundColor: "white",
+        shadowOffset: { width: 0, height: 2 },
+      },
     link: {
         marginTop: 15,
         paddingVertical: 15,
@@ -86,6 +100,17 @@ const designpattern = StyleSheet.create({
         paddingVertical: 5,
         marginVertical: 10,
         marginHorizontal: 10,
+        borderRadius: 20,
+        backgroundColor: "orange",
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        shadowOffset: { width: 0, height: 2 },
+    },
+    appButtoncall1: {
+        paddingHorizontal: 15,
+        paddingVertical: 5,
+        marginVertical: 0,
         borderRadius: 20,
         backgroundColor: "orange",
         shadowColor: "#000",
@@ -137,7 +162,6 @@ const designpattern = StyleSheet.create({
         shadowRadius: 3,
         shadowOffset: { width: 0, height: 2 },
     },
-
     offernavigationlength: {
         borderRadius: 20,
         width: 150,
