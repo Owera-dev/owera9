@@ -33,10 +33,10 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
         </View>
         <View style={designpattern.center}>
           <View style={designpattern.alignitems}>
-            <Pressable onPress={() => navigation.navigate("Contract")} style={designpattern.appButtondefault}>
+            <Pressable onPress={() => navigation.navigate("Contract")} style={designpattern.buttondefault}>
               <Text>Log out</Text>
             </Pressable>
-            <Pressable onPress={() => navigation.navigate("Contract")} style={designpattern.appButtondefault}>
+            <Pressable onPress={() => navigation.navigate("Contract")} style={designpattern.buttondefault}>
               <Text>legal</Text>
             </Pressable>
           </View>

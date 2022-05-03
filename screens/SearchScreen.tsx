@@ -15,25 +15,25 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
     <View>
       <View style={designpattern.offercontainer}>
         <View style={designpattern.offernavigationbackground}>
-          <Pressable style={designpattern.appButtoncall1}>
+          <Pressable style={designpattern.buttonprimary}>
             <AntDesign name="videocamera" size={25} color="white"/>
           </Pressable>
           <View style={designpattern.separatorhorizontal}/>
           <View style={designpattern.offernavigationlength}>
             <ScrollView horizontal={true} style={designpattern.scrollviewofferoptions}>
-            <Pressable style={designpattern.appButtondefault2}>
+            <Pressable style={designpattern.buttondefault}>
               <AntDesign name="shoppingcart" size={25} color="black"/>
             </Pressable>
             <View style={designpattern.separatorhorizontal}/>
-            <Pressable style={designpattern.appButtondefault2}>
+            <Pressable style={designpattern.buttondefault}>
               <AntDesign name="hearto" size={25} color="black"/>
             </Pressable>
             <View style={designpattern.separatorhorizontal}/>
-            <Pressable style={designpattern.appButtondefault2}>
+            <Pressable style={designpattern.buttondefault}>
               <AntDesign name="user" size={25} color="black"/>
             </Pressable>
             <View style={designpattern.separatorhorizontal}/>
-            <Pressable style={designpattern.appButtondefault2}>
+            <Pressable style={designpattern.buttondefault}>
               <AntDesign name="staro" size={25} color="black"/>
             </Pressable>
             </ScrollView>
@@ -76,7 +76,7 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           />
       </ScrollView>
       <TextInput
-        style={designpattern.floatbuttonsearch}
+        style={designpattern.searchplacing}
         onChangeText={onChangeText}
         value={text}
         placeholder="search"

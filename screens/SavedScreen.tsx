@@ -10,14 +10,14 @@ import { AntDesign } from '@expo/vector-icons';
 export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>) {
   const [text, onChangeText] = React.useState("");
 
-  const AppButtoncall = () => (
-    <TouchableOpacity style={designpattern.appButtoncall}>
+  const Provideronline = () => (
+    <TouchableOpacity style={designpattern.buttonprimary}>
       <AntDesign name="videocamera" size={25} color="white"/>
     </TouchableOpacity>
   );
 
-  const AppButtoncalloffline = () => (
-    <TouchableOpacity style={designpattern.appButtoncalloffline}>
+  const Provideroffline = () => (
+    <TouchableOpacity style={designpattern.buttondefault}>
       <AntDesign name="videocamera" size={30} color="lightgrey"/>
     </TouchableOpacity>
   );
@@ -27,7 +27,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
       <ScrollView>
 
         <View style={designpattern.alignitems}>
-          <AppButtoncall />
+          <Provideronline />
             <View style={designpattern.savedservicelist}>
               <Text style={designpattern.title}>service title</Text>
               <View style={designpattern.alignitems}>
@@ -40,7 +40,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
 
       <View style={designpattern.alignitems}>
-          <AppButtoncalloffline />
+          <Provideroffline />
             <View style={designpattern.savedservicelist}>
               <Text style={designpattern.title}>service title</Text>
               <View style={designpattern.alignitems}>
@@ -54,7 +54,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
       
       </ScrollView>
       <TextInput
-        style={designpattern.floatbuttonsearch}
+        style={designpattern.searchplacing}
         onChangeText={onChangeText}
         value={text}
         placeholder="search"

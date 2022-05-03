@@ -11,29 +11,17 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
   const [text, onChangeText] = React.useState("");
   const [number, onChangeNumber] = React.useState(null);
 
-  const AppButtondefault = ({ title }) => (
-    <TouchableOpacity style={designpattern.appButtondefault}>
-      <Text>{title}</Text>
-    </TouchableOpacity>
-  );
-
-  const AppButtonprime = ({ title }) => (
-    <TouchableOpacity style={designpattern.appButtonprime}>
-      <Text style={designpattern.normaltextprimebutton}>{title}</Text>
-    </TouchableOpacity>
-  );
-
-  const AppButtonlink = ({ title }) => (
-    <TouchableOpacity style={designpattern.appButtonlink}>
+  const Actions = ({ title }) => (
+    <TouchableOpacity style={designpattern.buttondefault}>
       <View style={designpattern.alignitems}>
-        <Text>{ title }  </Text>
         <AntDesign name="right" size={20} />
+        <Text>{ title }</Text>
       </View>
     </TouchableOpacity>
   );
 
-  const AppButtonfeedback = ({ title, criterialikes, criteriadislikes }) => (
-    <TouchableOpacity style={designpattern.appButtonfeedback}>
+  const Ratingitem = ({ title, criterialikes, criteriadislikes }) => (
+    <TouchableOpacity style={designpattern.buttondefault}>
       <View style={designpattern.alignitems}>
         <Text>{ title }   </Text>
         <AntDesign name="dislike2" size={20} />
@@ -49,7 +37,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
       <View>
           <ScrollView>
             <Text style={designpattern.title}>new video-service</Text>
-            <ScrollView horizontal={true} style={designpattern.horizontallist}>
+            <ScrollView horizontal={true}>
               <View style={designpattern.alignitems}>
                 <Pressable 
                   onPress={() => null}
@@ -74,63 +62,64 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                 </Pressable>
               </View>
             </ScrollView>
-            <ScrollView horizontal={true} style={designpattern.horizontallist}>
+            <ScrollView horizontal={true} >
               <TextInput
-                style={designpattern.input}
+                style={designpattern.inputactionrequired}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="service name"
               />
               <TextInput
-                style={designpattern.input}
+                style={designpattern.inputactionrequired}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="price /h"
               />
               <TextInput
-                style={designpattern.input}
+                style={designpattern.inputstandard}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="select currency"
               />
-              <AppButtonprime title="save service" />
-              <AppButtondefault title="delete service" />
+              <Pressable onPress={() => null} style={designpattern.buttonprimary} >
+                <Text style={designpattern.buttonprimary}>save service</Text>
+              </Pressable>
+              <Pressable onPress={() => null} style={designpattern.buttonprimary} >
+                <Text style={designpattern.buttonprimary}>delete service</Text>
+              </Pressable>
             </ScrollView>
-
           <View style={designpattern.separator} />
           <Text style={designpattern.title}>actions</Text>
 
-          <ScrollView horizontal={true} style={designpattern.horizontallist}>
+          <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
-              <AppButtonlink 
-                title="edit services"/>
-              <AppButtonlink title="payout" />
+              <Actions title="edit services"/>
+              <Actions title="payout"/>
             </View>
           </ScrollView>
           <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
-              <AppButtonlink title="spoken languages" />
-              <AppButtonlink title="availability" />
+              <Actions title="spoken languages"/>
+              <Actions title="availability"/>
             </View>
           </ScrollView>
 
           <View style={designpattern.separator} />
           <Text style={designpattern.title}>feedback to improve</Text>
-          <ScrollView horizontal={true} style={designpattern.horizontallist}>
-            <AppButtonfeedback 
-              title="criteria1" 
-              criterialikes="123"
-              criteriadislikes="456"
-            />
+          <ScrollView horizontal={true}>
+            <Ratingitem title="friendly" criterialikes="123" criteriadislikes="456" />
+            <Ratingitem title="nasty" criterialikes="2345" criteriadislikes="345" />
+            <Ratingitem title="hasty" criterialikes="345" criteriadislikes="345" />
+            <Ratingitem title="basty" criterialikes="234" criteriadislikes="456" />
           </ScrollView>
           <View style={designpattern.separator} />
           <View style={designpattern.separator} />
         </ScrollView>
         <Pressable 
             onPress={() => null}
-            style={designpattern.floatingprimebottom}>
-            <Text style={designpattern.normaltextprimebuttontitle}>Send invitation</Text>
-            <Text style={designpattern.normaltextprimebutton}>you got 123 times saved</Text>
+            style={designpattern.buttonprimary}>
+            <Text style={designpattern.title}>Send invitation</Text>
+            <Text style={designpattern.normal}>you got 123 times saved</Text>
           </Pressable>
       </View>
     </View>
