@@ -1,4 +1,5 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';

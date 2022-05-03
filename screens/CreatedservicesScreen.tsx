@@ -4,6 +4,7 @@ import { RootStackScreenProps } from '../types';
 import { AntDesign } from '@expo/vector-icons'; 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function CreatedservicesScreen({ navigation }: RootStackScreenProps<'Createdservices'>) {
   return (

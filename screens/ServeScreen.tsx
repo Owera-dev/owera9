@@ -5,6 +5,8 @@ import { Text, View } from '../components/Themed';
 import { AntDesign } from '@expo/vector-icons';
 import { RootTabScreenProps } from '../types';
 import { FAB, } from 'react-native-paper';
+import {designpattern} from "../assets/designpattern/designpattern";
+
 
 export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>) {
   const [text, onChangeText] = React.useState("");

@@ -2,6 +2,7 @@ import { StyleSheet, Button, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 import { AntDesign } from '@expo/vector-icons'; 
+import {designpattern} from "../assets/designpattern/designpattern";
 
 
 export default function ContractScreen({ navigation }: RootStackScreenProps<'Contract'>) {

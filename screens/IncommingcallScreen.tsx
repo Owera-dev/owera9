@@ -3,6 +3,7 @@ import { Platform, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import { RootStackScreenProps } from '../types';
 import { Text, View } from '../components/Themed';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function IncommingcallScreen({ navigation }: RootStackScreenProps<'Home'>) {
   return (

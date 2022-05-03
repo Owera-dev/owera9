@@ -5,6 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import * as React from 'react';
 import { Button } from 'react-native';
 import { RootStackScreenProps } from '../types';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 
 export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>) {

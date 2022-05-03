@@ -4,6 +4,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import * as React from 'react';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
   const [text, onChangeText] = React.useState("");
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   offernavigationbackground: {
-    backgroundColor: 'rgba(5,5,5,1)',
+    backgroundColor: 'rgba(0,0,0,2)',
     position: "absolute",
     bottom: 10,
     paddingVertical: 5,

@@ -1,4 +1,5 @@
 import { StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import {designpattern} from "../assets/designpattern/designpattern";
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
