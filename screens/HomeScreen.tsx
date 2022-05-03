@@ -41,8 +41,8 @@ export default function HomeScreen({ navigation }: RootStackScreenProps<'Home'>)
             </Pressable>
           </View>
           <View style={designpattern.separatorsmall}/>
-          <Text style={designpattern.incorporation}>OWERA ltd inc. 2022</Text>
-          <Text style={designpattern.incorporation}>#We love our users.</Text>
+          <Text style={designpattern.normal}>OWERA ltd inc. 2022</Text>
+          <Text style={designpattern.normal}>#We love our users.</Text>
         </View>
       </ScrollView>
       <View style={designpattern.center}>

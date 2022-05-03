@@ -15,55 +15,38 @@ const designpattern = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'normal',
       },
-    linkText: {
-        fontSize: 14,
-        color: '#2e78b7',
-    },
-    textprime: {
+    normaltextprimebutton: {
         fontSize: 15,
         fontWeight: 'bold',
         color: "white",
     },
-    floatbuttontexttitle: {
+    titletextprimebutton: {
         fontSize: 20,
         fontWeight: 'bold',
         color: "white",
     },
-    floatbuttontext: {
-        fontSize: 15,
-        fontWeight: 'normal',
-        color: "white",
-    },
-    incorporation: {
-        fontSize: 15,
-        fontWeight: 'normal',
-        color: "grey",
-    },
-    uploadtext: {
-        fontSize: 15,
-        marginTop: 10,
-        fontWeight: 'normal',
-        color: "orange",
-    },
     logo: {
-        fontSize: 100,
+        fontSize: 80,
         fontWeight: 'normal',
         color: "white",
         textShadowColor: "#8f7e7e",
         textShadowOffset: { width: 0, height: 1 },
         textShadowRadius: 6,
+        letterSpacing: 8,
     },
 /**Separators */
     separator: {
-      marginVertical: 30,
-      height: 1,
-      width: '80%',
+        backgroundColor: 'rgba(0,0,0,0)',
+        marginVertical: 30,
+        height: 1,
+        width: '80%',
     },
     separatorsmall: {
+        backgroundColor: 'rgba(0,0,0,0)',
         marginVertical: 10,
         height: 0,
     },
-    separatorsideways: {
+    separatorhorizontal: {
         backgroundColor: 'rgba(0,0,0,0)',
         width: 10,
     },
@@ -78,32 +61,22 @@ const designpattern = StyleSheet.create({
     alignitems: {
         flexDirection: "row",
     },
-    imagerow: {
-        flexDirection: "row",
-    },
-    alignitemsinitem: {
-        flexDirection: "row",
-    },
-    horizontallist: {
-        marginVertical: 5,
-    },
-    spacebetweenitems: {
-        paddingRight: 10,
-    },
-    margins: {
-        marginTop: 0,
-    },
 /**buttons */
     buttonprimary: {
-        marginVertical: 10,
-        height: 1,
-        width: '80%',
+        height: 40,
+        paddingHorizontal: 15,
+        shadowColor: "#000",
+        shadowOpacity: 0.20,
+        shadowRadius: 3,
+        shadowOffset: { width: 0, height: 2 },
+        borderRadius: 20,
+        backgroundColor: "orange",
+        justifyContent: "center",
     },
-    neutralbutton: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        borderWidth: 1,
-    },
+
+
+
+    
     floatingprimebottom: {
         borderRadius: 20,
         position: "absolute",
@@ -115,9 +88,6 @@ const designpattern = StyleSheet.create({
         alignItems: 'center',
     },
     appButtonprime: {
-        fontSize: 15,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
         borderRadius: 20,
         marginLeft: 10,
         marginVertical: 5,

@@ -19,13 +19,13 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
   const AppButtonprime = ({ title }) => (
     <TouchableOpacity style={designpattern.appButtonprime}>
-      <Text style={designpattern.textprime}>{title}</Text>
+      <Text style={designpattern.normaltextprimebutton}>{title}</Text>
     </TouchableOpacity>
   );
 
   const AppButtonlink = ({ title }) => (
     <TouchableOpacity style={designpattern.appButtonlink}>
-      <View style={designpattern.alignitemsinitem}>
+      <View style={designpattern.alignitems}>
         <Text>{ title }  </Text>
         <AntDesign name="right" size={20} />
       </View>
@@ -34,7 +34,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
   const AppButtonfeedback = ({ title, criterialikes, criteriadislikes }) => (
     <TouchableOpacity style={designpattern.appButtonfeedback}>
-      <View style={designpattern.alignitemsinitem}>
+      <View style={designpattern.alignitems}>
         <Text>{ title }   </Text>
         <AntDesign name="dislike2" size={20} />
         <Text>{ criteriadislikes }  </Text>
@@ -46,7 +46,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
   return (
     <View style={designpattern.container}>
-      <View style={designpattern.margins}>
+      <View>
           <ScrollView>
             <Text style={designpattern.title}>new video-service</Text>
             <ScrollView horizontal={true} style={designpattern.horizontallist}>
@@ -60,7 +60,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                     size={40} 
                     style={{ color: "orange" }}
                   />
-                  <Text style={designpattern.uploadtext}>video &{"\n"} picture</Text>
+                  <Text style={designpattern.normal}>video &{"\n"} picture</Text>
                 </Pressable>
                 <Pressable 
                   onPress={() => null}
@@ -129,8 +129,8 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
         <Pressable 
             onPress={() => null}
             style={designpattern.floatingprimebottom}>
-            <Text style={designpattern.floatbuttontexttitle}>Send invitation</Text>
-            <Text style={designpattern.floatbuttontext}>you got 123 times saved</Text>
+            <Text style={designpattern.normaltextprimebuttontitle}>Send invitation</Text>
+            <Text style={designpattern.normaltextprimebutton}>you got 123 times saved</Text>
           </Pressable>
       </View>
     </View>

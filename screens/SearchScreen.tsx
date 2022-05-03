@@ -18,21 +18,21 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           <Pressable style={designpattern.appButtoncall1}>
             <AntDesign name="videocamera" size={25} color="white"/>
           </Pressable>
-          <View style={designpattern.separatorsideways}/>
+          <View style={designpattern.separatorhorizontal}/>
           <View style={designpattern.offernavigationlength}>
             <ScrollView horizontal={true} style={designpattern.scrollviewofferoptions}>
             <Pressable style={designpattern.appButtondefault2}>
               <AntDesign name="shoppingcart" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorsideways}/>
+            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.appButtondefault2}>
               <AntDesign name="hearto" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorsideways}/>
+            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.appButtondefault2}>
               <AntDesign name="user" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorsideways}/>
+            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.appButtondefault2}>
               <AntDesign name="staro" size={25} color="black"/>
             </Pressable>
