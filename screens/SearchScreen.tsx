@@ -45,7 +45,8 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
       <Offerdisplay />
       <Offerdisplay />
       <Text style={designpattern.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of Saved, name and prename,) #Ratings #Add service to Saved #Purch service #searchword input</Text>
-      
+
+
       <Button 
           title="Login"
           onPress={() => navigation.navigate("Login")}
