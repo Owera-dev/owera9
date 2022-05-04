@@ -18,21 +18,17 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           <Pressable style={designpattern.buttonprimary}>
             <AntDesign name="videocamera" size={25} color="white"/>
           </Pressable>
-          <View style={designpattern.separatorhorizontal}/>
           <View style={designpattern.offernavigationlength}>
             <ScrollView horizontal={true} style={designpattern.scrollviewofferoptions}>
             <Pressable style={designpattern.buttondefault}>
               <AntDesign name="shoppingcart" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.buttondefault}>
               <AntDesign name="hearto" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.buttondefault}>
               <AntDesign name="user" size={25} color="black"/>
             </Pressable>
-            <View style={designpattern.separatorhorizontal}/>
             <Pressable style={designpattern.buttondefault}>
               <AntDesign name="staro" size={25} color="black"/>
             </Pressable>
@@ -76,10 +72,11 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           />
       </ScrollView>
       <TextInput
-        style={designpattern.searchplacing}
+        style={designpattern.searchinfeed}
         onChangeText={onChangeText}
         value={text}
         placeholder="search"
+        placeholderTextColor="black"
       />
     </View>
   );

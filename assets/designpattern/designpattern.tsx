@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 const designpattern = StyleSheet.create({
 /**Page layout */
     container: {
@@ -69,11 +70,6 @@ const designpattern = StyleSheet.create({
         right: "10%",
         backgroundColor: "blue",
         paddingVertical: 10,
-    },
-    searchplacing: {
-        position: "absolute",
-        left: 10,
-        top: 10,
     },
 /**buttons */
     buttonprimary: {
@@ -154,23 +150,22 @@ const designpattern = StyleSheet.create({
 /**Elements */
     /**Offernavigation */
     offernavigationbackground: {
-        backgroundColor: 'rgba(0,0,0,2)',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
         position: "absolute",
         bottom: 10,
-        paddingVertical: 5,
-        paddingHorizontal: 5,
+        left: 10,
+        paddingVertical: 0,
+        paddingHorizontal: 0,
         borderRadius: 40,
         flexDirection: "row",
-        marginLeft: 10,
-        marginRight: 10,
     },
     scrollviewofferoptions: {
         backgroundColor: 'rgba(0,0,0,0)',
-        borderRadius: 20,
+        borderRadius: 40,
     },
     offernavigationlength: {
         borderRadius: 20,
-        width: 150,
+        width: 170,
         backgroundColor: 'rgba(0,0,0,0)',
     },
     /**Offercontainer */
@@ -220,6 +215,17 @@ const designpattern = StyleSheet.create({
     },
     savedservicelist: {
         marginLeft: 10,
+    },
+    searchinfeed: {
+        position: "absolute",
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        borderRadius: 20,
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        left: 10,
+        top: 0,
+        fontSize: 15,
+        fontWeight: 'normal',
     },
 });
   export {designpattern}

@@ -14,8 +14,8 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
   const Actions = ({ title }) => (
     <TouchableOpacity style={designpattern.buttondefault}>
       <View style={designpattern.alignitems}>
-        <AntDesign name="right" size={20} />
-        <Text>  { title }</Text>
+        <Text>{ title }  </Text>
+        <AntDesign name="right" size={15} />
       </View>
     </TouchableOpacity>
   );
@@ -35,6 +35,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
   return (
     <View style={designpattern.container}>
       <View>
+        <ScrollView horizontal={true}>
           <ScrollView>
           <Pressable style={designpattern.buttondefault} >
             <Text style={designpattern.title}>new video-service</Text>
@@ -70,18 +71,21 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="service name"
+                placeholderTextColor="black"
               />
               <TextInput
                 style={designpattern.inputactionrequired}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="price /h"
+                placeholderTextColor="black"
               />
               <TextInput
-                style={designpattern.inputstandard}
+                style={designpattern.inputactionrequired}
                 onChangeText={onChangeText}
                 value={text}
                 placeholder="select currency"
+                placeholderTextColor="black"
               />
               <Pressable onPress={() => null} style={designpattern.buttonprimary} >
                 <Text style={designpattern.normaltextprimebutton}>save service</Text>
@@ -93,7 +97,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           <View style={designpattern.separator} />
 
           <Pressable style={designpattern.buttondefault} >
-            <Text style={designpattern.title}>actions</Text>
+            <Text style={designpattern.title} >actions</Text>
           </Pressable>
 
           <ScrollView horizontal={true}>
@@ -122,6 +126,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           <View style={designpattern.separator} />
           <View style={designpattern.separator} />
         </ScrollView>
+      </ScrollView>
         <Pressable 
             onPress={() => null}
             style={designpattern.buttonprimary}>

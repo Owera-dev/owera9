@@ -1,6 +1,6 @@
-import { StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { Button, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import {designpattern} from "../assets/designpattern/designpattern";
-
+import { BlurView, VibrancyView } from "@react-native-community/blur";
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -11,6 +11,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
   const [text, onChangeText] = React.useState("");
 
   const Provideronline = () => (
+    
     <TouchableOpacity style={designpattern.buttonprimary}>
       <AntDesign name="videocamera" size={25} color="white"/>
     </TouchableOpacity>
@@ -50,15 +51,15 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
             </View>
         </View>
       <View style={designpattern.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      
-      
+
       </ScrollView>
-      <TextInput
-        style={designpattern.searchplacing}
-        onChangeText={onChangeText}
-        value={text}
-        placeholder="search"
-      />
+        <TextInput
+          style={designpattern.searchinfeed}
+          onChangeText={onChangeText}
+          value={text}
+          placeholder="search"   
+          placeholderTextColor="black"
+        />
     </View>
   );
 }
