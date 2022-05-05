@@ -35,24 +35,12 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
   return (
     <View style={designpattern.container}>
       <View>
-        <ScrollView horizontal={true}>
           <ScrollView>
           <Pressable style={designpattern.buttondefault} >
             <Text style={designpattern.title}>new video-service</Text>
           </Pressable>
             <ScrollView horizontal={true}>
               <View style={designpattern.alignitems}>
-                <Pressable 
-                  onPress={() => null}
-                  style={designpattern.uploadfield}
-                  >
-                  <AntDesign 
-                    name="pluscircleo" 
-                    size={40} 
-                    style={{ color: "orange" }}
-                  />
-                  <Text style={designpattern.normal}>video &{"\n"} picture</Text>
-                </Pressable>
                 <Pressable 
                   onPress={() => null}
                   style={designpattern.visuals}
@@ -65,6 +53,10 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                 </Pressable>
               </View>
             </ScrollView>
+            <Pressable onPress={() => null} style={designpattern.buttonsecondary} >
+              <Text style={designpattern.normal}>upload picture & video</Text>
+            </Pressable>
+            
             <ScrollView horizontal={true} >
               <TextInput
                 style={designpattern.inputactionrequired}
@@ -87,13 +79,15 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
                 placeholder="select currency"
                 placeholderTextColor="black"
               />
-              <Pressable onPress={() => null} style={designpattern.buttonprimary} >
-                <Text style={designpattern.normaltextprimebutton}>save service</Text>
-              </Pressable>
-              <Pressable onPress={() => null} style={designpattern.buttonprimary} >
-                <Text style={designpattern.normaltextprimebutton}>delete service</Text>
-              </Pressable>
             </ScrollView>
+            <View style={designpattern.alignitems}>
+              <Pressable onPress={() => null} style={designpattern.buttonprimary} >
+                <Text style={designpattern.normaltextprimebutton}>save</Text>
+              </Pressable>
+              <Pressable onPress={() => null} style={designpattern.buttondefault} >
+                <Text style={designpattern.normal}>delete</Text>
+              </Pressable>
+            </View>
           <View style={designpattern.separator} />
 
           <Pressable style={designpattern.buttondefault} >
@@ -126,7 +120,6 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           <View style={designpattern.separator} />
           <View style={designpattern.separator} />
         </ScrollView>
-      </ScrollView>
         <Pressable 
             onPress={() => null}
             style={designpattern.buttonprimary}>

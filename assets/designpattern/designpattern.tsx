@@ -176,8 +176,8 @@ const designpattern = StyleSheet.create({
         borderRadius: 20,
         marginBottom: 15,
         shadowColor: "#000",
-        shadowOpacity: 0.40,
-        shadowRadius: 3,
+        shadowOpacity: 0.6,
+        shadowRadius: 2,
         shadowOffset: { width: 0, height: 2 },
     },
     visuals: {
@@ -191,8 +191,8 @@ const designpattern = StyleSheet.create({
         marginLeft: 10,
         marginVertical: 5,
         shadowColor: "#000",
-        shadowOpacity: 0.20,
-        shadowRadius: 3,
+        shadowOpacity: 0.6,
+        shadowRadius: 2,
         shadowOffset: { width: 0, height: 2 },
     },
     /**no groups */
