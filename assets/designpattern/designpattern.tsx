@@ -55,12 +55,14 @@ const designpattern = StyleSheet.create({
     center: {
         alignItems: 'center',
         justifyContent: "center",
+        backgroundColor: 'rgba(0,0,0,0)',
     },
     left: {
         marginLeft: 10,
     },
     alignitems: {
         flexDirection: "row",
+        backgroundColor: 'rgba(0,0,0,0)',
     },
     actionsugestor: {
         borderRadius: 20,
@@ -76,7 +78,7 @@ const designpattern = StyleSheet.create({
         margin: 5,
         height: 40,
         alignSelf: 'flex-start',
-        paddingHorizontal: 15,
+        paddingHorizontal: 25,
         shadowColor: "#000",
         shadowOpacity: 0.6,
         shadowRadius: 2,

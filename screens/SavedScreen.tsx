@@ -19,7 +19,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
   const Provideroffline = () => (
     <TouchableOpacity style={designpattern.buttondefault}>
-      <AntDesign name="videocamera" size={30} color="lightgrey"/>
+      <AntDesign name="videocamera" size={25} color="lightgrey"/>
     </TouchableOpacity>
   );
 

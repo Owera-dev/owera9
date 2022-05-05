@@ -13,7 +13,7 @@ import { ColorSchemeName, Pressable } from 'react-native';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
-import NotFoundScreen from '../screens/NotFoundScreen';
+import LevelupScreen from '../screens/LevelupScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SavedScreen from '../screens/SavedScreen';
 import ServeScreen from '../screens/ServeScreen';
@@ -52,9 +52,9 @@ function RootNavigator() {
         options={{ headerShown: false }} 
       />
       <Stack.Screen 
-        name="NotFound" 
-        component={NotFoundScreen} 
-        options={{ title: 'Oops!' }} 
+        name="Levelup" 
+        component={LevelupScreen} 
+        options={{ title: 'Levelup' }} 
       />
       <Stack.Screen 
         name="Callendforcustomer" 

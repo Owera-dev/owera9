@@ -33,7 +33,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         },
       },
       Home: 'modal',
-      NotFound: '*',
+      Levelup: '*',
     },
   },
 };

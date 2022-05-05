@@ -15,31 +15,32 @@ export default function LoginScreen() {
       </View>
       <View style={designpattern.separator}/>
       <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="e-mail"
-          placeholderTextColor="black"
-        />
-      </View>
-      <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="password"
-          placeholderTextColor="black"
-        />
+        <View style={designpattern.alignitems}>
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="e-mail"
+            placeholderTextColor="black"
+          />
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="password"
+            placeholderTextColor="black"
+          />
+        </View>
       </View>
       <View style={designpattern.center}>
         <Pressable style={designpattern.buttonprimary} >
           <Text style={designpattern.normaltextprimebutton}>Login</Text>
         </Pressable>
       </View>
+      <View style={designpattern.separator}/>
       <View style={designpattern.center}>
         <Pressable style={designpattern.buttondefault} >
-          <Text style={designpattern.normal}>Signup</Text>
+          <Text style={designpattern.normal}>go to signup</Text>
         </Pressable>
       </View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />

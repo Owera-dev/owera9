@@ -17,54 +17,56 @@ export default function SignupScreen({ navigation }: RootStackScreenProps<'Signu
       </View>
       <View style={designpattern.separator}/>
       <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="name"
-          placeholderTextColor="black"
-        />
+        <View style={designpattern.alignitems}>
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="name"
+            placeholderTextColor="black"
+          />
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="prename"
+            placeholderTextColor="black"
+          />
+        </View>
       </View>
       <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="prename"
-          placeholderTextColor="black"
-        />
+        <View style={designpattern.alignitems}>
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="e-mail"
+            placeholderTextColor="black"
+          />
+          <TextInput
+            style={designpattern.inputactionrequired}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="new password"
+            placeholderTextColor="black"
+          />
+        </View>
       </View>
       <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="e-mail"
-          placeholderTextColor="black"
-        />
+          <Pressable style={designpattern.buttonprimary} >
+            <Text style={designpattern.normaltextprimebutton}>Signup</Text>
+          </Pressable>
+
       </View>
+      <View style={designpattern.separator}/>
       <View style={designpattern.center}>
-        <TextInput
-          style={designpattern.inputactionrequired}
-          onChangeText={onChangeText}
-          value={text}
-          placeholder="new password"
-          placeholderTextColor="black"
-        />
-      </View>
-      <View style={designpattern.center}>
-        <Pressable style={designpattern.buttonprimary} >
-          <Text style={designpattern.normaltextprimebutton}>Signup</Text>
+        <Pressable style={designpattern.buttondefault} >
+          <Text style={designpattern.normal}>go to login</Text>
         </Pressable>
       </View>
       <View style={designpattern.center}>
         <Pressable style={designpattern.buttondefault} >
-          <Text style={designpattern.normal}>Login</Text>
-        </Pressable>
-      </View>
-      <View style={designpattern.center}>
-        <Pressable style={designpattern.buttondefault} >
-          <Text style={designpattern.normal}>By registering you accept the terms and conditions</Text>
+          <Text style={designpattern.normal}>by registering you accept the terms and conditions</Text>
         </Pressable>
       </View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />

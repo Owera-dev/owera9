@@ -59,8 +59,8 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           onPress={() => navigation.navigate("Incommingcall")}
           />
       <Button 
-          title="NotFound"
-          onPress={() => navigation.navigate("NotFound")}
+          title="Levelup"
+          onPress={() => navigation.navigate("Levelup")}
           />
       <Button 
           title="Callendforcustomer"
