@@ -18,18 +18,18 @@ export default function LevelupScreen({ navigation }: RootStackScreenProps<'Leve
       </View>
       <View style={designpattern.center}>
         <View style={designpattern.buttondefault}>
-            <Text style={designpattern.normal}>system update or else</Text>
+            <Text style={designpattern.normal}>system update or else...</Text>
         </View>
       </View>
       <View style={designpattern.center}>
-        <View style={designpattern.buttondefault}>
-            <Text style={designpattern.normal}>close & restart...</Text>
+        <View style={designpattern.buttonprimary}>
+            <Text style={designpattern.normaltextprimebutton}>just close and restart the app</Text>
         </View>
       </View>
       <View style={designpattern.separator}/>
       <View style={designpattern.center}>
         <View style={designpattern.buttondefault}>
-            <Text style={designpattern.normal}>because we`re working to get the best</Text>
+            <Text style={designpattern.normal}>Because we`re working to be the best.</Text>
         </View>
       </View>
     </View>

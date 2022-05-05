@@ -9,8 +9,6 @@ import {designpattern} from "../assets/designpattern/designpattern";
 export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'>) {
   const [text, onChangeText] = React.useState("");
 
-  const image = { uri: "https://reactjs.org/logo-og.png" };
-
   const Offerdisplay = () => (
     <View>
       <View style={designpattern.offercontainer}>
@@ -44,7 +42,6 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
       <ScrollView>
       <Offerdisplay />
       <Offerdisplay />
-      <Text style={designpattern.normal}>#Visuals #Service titles #About service(price 1h, "unused time get refunded") #about provider(language spoken, amount of Saved, name and prename,) #Ratings #Add service to Saved #Purch service #searchword input</Text>
 
       <Button 
           title="Signup"
@@ -72,7 +69,7 @@ export default function SearchScreen({ navigation }: RootTabScreenProps<'Search'
           />
       <Button 
           title="Createdservices"
-          onPress={() => navigation.navigate("Callendprovider")}
+          onPress={() => navigation.navigate("Createdservices")}
           />
       </ScrollView>
       <TextInput

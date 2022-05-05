@@ -7,6 +7,10 @@ const designpattern = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    containerleft: {
+        flex: 1,
+        paddingHorizontal: 10,
+      },
 /**Text */
     title: {
       fontSize: 20,

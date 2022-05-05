@@ -1,10 +1,10 @@
 import { StyleSheet, TextInput, ScrollView, Button, Pressable, TouchableOpacity } from 'react-native';
-import React from "react";
 import { Text, View } from '../components/Themed';
 import { AntDesign } from '@expo/vector-icons';
 import { RootTabScreenProps } from '../types';
 import { FAB, } from 'react-native-paper';
 import {designpattern} from "../assets/designpattern/designpattern";
+import * as React from 'react';
 
 
 export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>) {
@@ -34,7 +34,6 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
   return (
     <View style={designpattern.container}>
-      <View>
           <ScrollView>
           <Pressable style={designpattern.buttondefault} >
             <Text style={designpattern.title}>new video-service</Text>
@@ -96,7 +95,7 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
 
           <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
-              <Actions title="edit services"/>
+              <Actions title="edit services" onPress={() => navigation.navigate("Createdservices")}/>
               <Actions title="payout"/>
             </View>
           </ScrollView>
@@ -126,7 +125,6 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
             <Text style={designpattern.title}>Send invitation</Text>
             <Text style={designpattern.normal}>you got 123 times saved</Text>
           </Pressable>
-      </View>
     </View>
   );
 }

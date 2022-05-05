@@ -64,9 +64,10 @@ export default function SignupScreen({ navigation }: RootStackScreenProps<'Signu
           <Text style={designpattern.normal}>go to login</Text>
         </Pressable>
       </View>
+      <View style={designpattern.separator}/>
       <View style={designpattern.center}>
         <Pressable style={designpattern.buttondefault} >
-          <Text style={designpattern.normal}>by registering you accept the terms and conditions</Text>
+          <Text style={designpattern.normal}>by registering you accept {'\n'}the terms and conditions</Text>
         </Pressable>
       </View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />

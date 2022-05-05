@@ -44,7 +44,7 @@ export default function IncommingcallScreen({ navigation }: RootStackScreenProps
           <Text style={designpattern.normal}>Rechtsberatung</Text>
         </View>
       </View>
-      <View style={designpattern.separatorsmall}/>
+      <View style={designpattern.separator}/>
       <View style={designpattern.center}>
         <Pressable style={designpattern.buttonprimary}>
           <View style={designpattern.alignitems}>
@@ -58,6 +58,7 @@ export default function IncommingcallScreen({ navigation }: RootStackScreenProps
             />
           </View>
         </Pressable>
+      <View style={designpattern.separator}/>
       </View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>

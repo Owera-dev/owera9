@@ -10,11 +10,20 @@ import { AntDesign } from '@expo/vector-icons';
 export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>) {
   const [text, onChangeText] = React.useState("");
 
-  const Provideronline = () => (
-    
-    <TouchableOpacity style={designpattern.buttonprimary}>
-      <AntDesign name="videocamera" size={25} color="white"/>
-    </TouchableOpacity>
+  const Service = ({servicetitle, priceperhour, currency, namee, prename }) => (
+    <View>
+        <View style={designpattern.alignitems}>
+          <TouchableOpacity style={designpattern.buttonprimary}>
+            <AntDesign name="videocamera" size={25} color="white"/>
+          </TouchableOpacity>
+          <View style={designpattern.separatorhorizontal}/>
+          <View>
+            <Text style={designpattern.title}>{servicetitle}</Text>
+            <Text style={designpattern.normal}>{priceperhour} {currency}    {namee} {prename}</Text>
+          </View>
+        </View>
+        <View style={designpattern.separatorsmall}/>
+    </View>
   );
 
   const Provideroffline = () => (
@@ -24,33 +33,21 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
   );
 
   return (
-    <View style={designpattern.container}>
+    <View style={designpattern.containerleft}>
       <ScrollView>
-
-        <View style={designpattern.alignitems}>
-          <Provideronline />
-            <View style={designpattern.savedservicelist}>
-              <Text style={designpattern.title}>service title</Text>
-              <View style={designpattern.alignitems}>
-                <Text style={designpattern.normal}>13.20 chf /h   </Text>
-                <Text style={designpattern.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={designpattern.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-
-      <View style={designpattern.alignitems}>
-          <Provideroffline />
-            <View style={designpattern.savedservicelist}>
-              <Text style={designpattern.title}>service title</Text>
-              <View style={designpattern.alignitems}>
-                <Text style={designpattern.normal}>13.20 chf /h   </Text>
-                <Text style={designpattern.normal}>name prename</Text>
-              </View>
-            </View>
-        </View>
-      <View style={designpattern.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
 
       </ScrollView>
         <TextInput
