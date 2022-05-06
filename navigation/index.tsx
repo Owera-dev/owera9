@@ -137,7 +137,7 @@ function BottomTabNavigator() {
         component={SavedScreen}
         options={({ navigation }: RootTabScreenProps<'Saved'>) => ({
           title: 'Saved',
-          tabBarIcon: ({ color }) => <AntDesign name="heart" size={25} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="hearto" size={25} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Home')}

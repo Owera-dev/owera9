@@ -13,7 +13,8 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
   const Service = ({servicetitle, priceperhour, currency, namee, prename }) => (
     <View>
         <View style={designpattern.alignitems}>
-          <TouchableOpacity style={designpattern.buttonprimary}>
+          <View style={designpattern.separatorhorizontal}/>
+          <TouchableOpacity style={designpattern.buttonprimaryicon}>
             <AntDesign name="videocamera" size={25} color="white"/>
           </TouchableOpacity>
           <View style={designpattern.separatorhorizontal}/>
@@ -22,7 +23,7 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
             <Text style={designpattern.normal}>{priceperhour} {currency}    {namee} {prename}</Text>
           </View>
         </View>
-        <View style={designpattern.separatorsmall}/>
+        <View style={designpattern.separatorhorizontallist}/>
     </View>
   );
 
@@ -34,22 +35,23 @@ export default function SavedScreen({ navigation }: RootTabScreenProps<'Saved'>)
 
   return (
     <View style={designpattern.containerleft}>
-      <ScrollView>
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-        <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
-
-      </ScrollView>
+      <View style={designpattern.left}>
+        <ScrollView>
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+          <Service servicetitle="spanishprononciation" priceperhour="12.50" currency="chf" namee="Heinz" prename="Ketchup" />
+        </ScrollView>
+      </View>
         <TextInput
           style={designpattern.searchinfeed}
           onChangeText={onChangeText}

@@ -5,6 +5,7 @@ import { RootTabScreenProps } from '../types';
 import { FAB, } from 'react-native-paper';
 import {designpattern} from "../assets/designpattern/designpattern";
 import * as React from 'react';
+import CreatedservicesScreen from './CreatedservicesScreen';
 
 
 export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>) {
@@ -20,10 +21,10 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
     </TouchableOpacity>
   );
 
-  const Ratingitem = ({ title, criterialikes, criteriadislikes }) => (
+  const Ratingitem = ({ ratingtitle, criterialikes, criteriadislikes }) => (
     <TouchableOpacity style={designpattern.buttondefault}>
       <View style={designpattern.alignitems}>
-        <Text>{ title }   </Text>
+        <Text>{ ratingtitle }   </Text>
         <AntDesign name="dislike2" size={20} />
         <Text>{ criteriadislikes }  </Text>
         <AntDesign name="like2" size={20} />
@@ -40,20 +41,13 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           </Pressable>
             <ScrollView horizontal={true}>
               <View style={designpattern.alignitems}>
-                <Pressable 
-                  onPress={() => null}
-                  style={designpattern.visuals}
-                  >
-                  <AntDesign 
-                    name="closecircleo" 
-                    size={20} 
-                    style={{paddingTop: 100}}
-                  />
+                <Pressable onPress={() => null} style={designpattern.visuals} >
+                  <AntDesign name="closecircleo" size={20} style={{paddingTop: 100}} />
                 </Pressable>
               </View>
             </ScrollView>
             <Pressable onPress={() => null} style={designpattern.buttonsecondary} >
-              <Text style={designpattern.normal}>upload picture & video</Text>
+              <Text style={designpattern.normal}>add picture & video</Text>
             </Pressable>
             
             <ScrollView horizontal={true} >
@@ -93,18 +87,22 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
             <Text style={designpattern.title} >actions</Text>
           </Pressable>
 
-          <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
-              <Actions title="edit services" onPress={() => navigation.navigate("Createdservices")}/>
-              <Actions title="payout"/>
+              <Pressable onPress={() => navigation.navigate("")}>
+                <Actions title="edit services"/>
+              </Pressable>
+              <Pressable onPress={() => navigation.navigate("")}>
+                <Actions title="payout"/>
+              </Pressable>
             </View>
-          </ScrollView>
-          <ScrollView horizontal={true}>
             <View style={designpattern.alignitems}>
-              <Actions title="spoken languages"/>
-              <Actions title="availability"/>
+              <Pressable onPress={() => navigation.navigate("")}>
+                <Actions title="spoken languages"/>
+              </Pressable>
+              <Pressable onPress={() => navigation.navigate("")}>
+                <Actions title="availability"/>
+              </Pressable>
             </View>
-          </ScrollView>
           <View style={designpattern.separator} />
 
           <Pressable style={designpattern.buttondefault} >
@@ -119,12 +117,18 @@ export default function ServeScreen({ navigation }: RootTabScreenProps<'Serve'>)
           <View style={designpattern.separator} />
           <View style={designpattern.separator} />
         </ScrollView>
-        <Pressable 
-            onPress={() => null}
-            style={designpattern.buttonprimary}>
-            <Text style={designpattern.title}>Send invitation</Text>
-            <Text style={designpattern.normal}>you got 123 times saved</Text>
-          </Pressable>
+        <Pressable onPress={() => null} style={designpattern.serveinviter}>
+          <View style={designpattern.alignitems}>
+            <View style={designpattern.center}>
+              <AntDesign name="sharealt" size={30} color="white"/>
+            </View>
+            <View style={designpattern.separatorhorizontal}/>
+              <View style={designpattern.centerleft}>
+                <Text style={designpattern.titletextprimebutton}>Send invitation</Text>
+                <Text style={designpattern.normaltextprimebutton}>you got 123 times saved</Text>
+              </View>
+          </View>
+        </Pressable>
     </View>
   );
 }

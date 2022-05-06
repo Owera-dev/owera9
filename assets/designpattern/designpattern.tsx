@@ -9,7 +9,6 @@ const designpattern = StyleSheet.create({
     },
     containerleft: {
         flex: 1,
-        paddingHorizontal: 10,
       },
 /**Text */
     title: {
@@ -29,6 +28,12 @@ const designpattern = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: "white",
+    },
+    offertitling: {
+        position: "relative",
+        color: "black",
+        marginVertical: 5,
+        backgroundColor: 'rgba(0,0,0,0)',
     },
     logo: {
         fontSize: 80,
@@ -51,6 +56,11 @@ const designpattern = StyleSheet.create({
         marginVertical: 10,
         height: 0,
     },
+    separatorhorizontallist: {
+        backgroundColor: 'rgba(0,0,0,0)',
+        marginVertical: 15,
+        height: 0,
+    },
     separatorhorizontal: {
         backgroundColor: 'rgba(0,0,0,0)',
         width: 10,
@@ -58,6 +68,10 @@ const designpattern = StyleSheet.create({
 /**placing */
     center: {
         alignItems: 'center',
+        justifyContent: "center",
+        backgroundColor: 'rgba(0,0,0,0)',
+    },
+    centerleft: {
         justifyContent: "center",
         backgroundColor: 'rgba(0,0,0,0)',
     },
@@ -89,6 +103,32 @@ const designpattern = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         borderRadius: 20,
         backgroundColor: "orange",
+        justifyContent: "center",
+    },
+    buttonprimaryicon: {
+        margin: 5,
+        height: 40,
+        width: 50,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOpacity: 0.6,
+        shadowRadius: 2,
+        shadowOffset: { width: 0, height: 2 },
+        borderRadius: 20,
+        backgroundColor: "orange",
+        justifyContent: "center",
+    },
+    buttondefaulticon: {
+        margin: 5,
+        height: 40,
+        width: 50,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOpacity: 0.6,
+        shadowRadius: 2,
+        shadowOffset: { width: 0, height: 2 },
+        borderRadius: 20,
+        backgroundColor: "white",
         justifyContent: "center",
     },
     buttonsecondary: {
@@ -159,7 +199,6 @@ const designpattern = StyleSheet.create({
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         position: "absolute",
         bottom: 10,
-        left: 10,
         paddingVertical: 0,
         paddingHorizontal: 0,
         borderRadius: 40,
@@ -176,16 +215,31 @@ const designpattern = StyleSheet.create({
     },
     /**Offercontainer */
     offercontainer: {
-        backgroundColor: "lightgrey",
+        alignItems: "center",
         marginHorizontal: 10,
-        height: 550,
-        borderRadius: 20,
-        marginBottom: 15,
+        borderRadius: 0,
+        marginBottom: 80,
+        height: 650,
         shadowColor: "#000",
         shadowOpacity: 0.6,
         shadowRadius: 2,
         shadowOffset: { width: 0, height: 2 },
     },
+
+    picturemaxheight: {
+        width: "100%",
+    },
+    picturesizing: {
+        resizeMode: "contain",
+        width: 300,
+        height: 450,
+    },
+    servicecontainer: {
+        width: "100%",
+        marginBottom: 100,
+    },
+
+
     visuals: {
         borderRadius: 20,
         backgroundColor: 'lightgrey',
@@ -226,12 +280,26 @@ const designpattern = StyleSheet.create({
         position: "absolute",
         paddingHorizontal: 15,
         paddingVertical: 10,
-        borderRadius: 20,
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        left: 10,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        borderColor: "grey",
+        borderWidth: 0,
+        borderTopColor: "white",
+        alignSelf: "center",
         top: 0,
         fontSize: 15,
         fontWeight: 'normal',
+    },
+    serveinviter: {
+        position: "absolute",
+        paddingHorizontal: 30,
+        paddingVertical: 5,
+        borderRadius: 20,
+        backgroundColor: 'orange',
+        borderWidth: 0,
+        alignSelf: "center",
+        bottom: 20,
     },
 });
   export {designpattern}
