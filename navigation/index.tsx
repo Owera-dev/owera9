@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
- import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
@@ -14,15 +14,16 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
 import LevelupScreen from '../screens/LevelupScreen';
-import SearchScreen from '../screens/SearchScreen';
 import SavedScreen from '../screens/SavedScreen';
 import ServeScreen from '../screens/ServeScreen';
+import SearchfeedScreen from '../screens/SearchfeedScreen';
 import CallendforcustomerScreen from '../screens/CallendforcustomerScreen';
 import CallendproviderScreen from '../screens/CallendproviderScreen';
 import ContractScreen from '../screens/ContractScreen';
 import IncommingcallScreen from '../screens/IncommingcallScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
+
 import CreatedservicesScreen from '../screens/CreatedservicesScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -76,6 +77,10 @@ function RootNavigator() {
         name="Signup" 
         component={SignupScreen} 
       />
+      <Stack.Screen 
+        name="Searchfeed" 
+        component={SearchfeedScreen} 
+      />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen 
           name="Home" 
@@ -112,7 +117,7 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="Search"
-        component={SearchScreen}
+        component={SearchfeedScreen}
         options={({ navigation }: RootTabScreenProps<'Search'>) => ({
           title: 'Search',
           tabBarIcon: ({ color }) => <AntDesign name="earth" size={25} color={color} />,

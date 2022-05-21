@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, TextInput, Pressable } from 'react-native';
+import { Platform, TextInput, Pressable, Button, TouchableOpacity } from 'react-native';
 import {designpattern} from "../assets/designpattern/designpattern";
 import React from "react";
+import { AntDesign } from '@expo/vector-icons';
+import { RootTabScreenProps } from '../types';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function LoginScreen() {
@@ -16,20 +17,28 @@ export default function LoginScreen() {
       <View style={designpattern.separator}/>
       <View style={designpattern.center}>
         <View style={designpattern.alignitems}>
-          <TextInput
-            style={designpattern.inputactionrequired}
-            onChangeText={onChangeText}
-            value={text}
-            placeholder="e-mail"
-            placeholderTextColor="black"
-          />
-          <TextInput
-            style={designpattern.inputactionrequired}
-            onChangeText={onChangeText}
-            value={text}
-            placeholder="password"
-            placeholderTextColor="black"
-          />
+          <View style={designpattern.inputactionrequired}>
+            <View style={designpattern.alignitems}>
+              <Text style={designpattern.normal}>@ </Text>
+              <TextInput
+                onChangeText={onChangeText}
+                value={text}
+                placeholder="e-mail"
+                placeholderTextColor="black"
+              />
+            </View>
+          </View>
+          <View style={designpattern.inputactionrequired}>
+            <View style={designpattern.alignitems}>
+              <AntDesign name="lock" size={20} />
+              <TextInput
+                onChangeText={onChangeText}
+                value={text}
+                placeholder="password"
+                placeholderTextColor="black"
+              />
+            </View>
+          </View>
         </View>
       </View>
       <View style={designpattern.center}>
@@ -39,9 +48,12 @@ export default function LoginScreen() {
       </View>
       <View style={designpattern.separator}/>
       <View style={designpattern.center}>
-        <Pressable style={designpattern.buttondefault} >
-          <Text style={designpattern.normal}>go to signup</Text>
-        </Pressable>
+        <TouchableOpacity style={designpattern.buttoninformative}>
+          <View style={designpattern.alignitems}>
+            <AntDesign name="right" size={15} />
+            <Text>signup</Text>
+          </View>
+        </TouchableOpacity>
       </View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
